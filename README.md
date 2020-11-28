@@ -9,5 +9,4 @@
 
 ## factor graph
 2019 Sep 
-["miniSAM: A Flexible Factor Graph Non-linear Least Squares Optimization Framework"]
-(https://arxiv.org/pdf/1909.00903v1.pdf)
+["miniSAM: A Flexible Factor Graph Non-linear Least Squares Optimization Framework"](https://arxiv.org/pdf/1909.00903v1.pdf)

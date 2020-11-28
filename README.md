@@ -5,7 +5,9 @@
 # papers
 
 ## graph-based
-["Graph-Based Parallel Large Scale Structure from Motion"](https://arxiv.org/pdf/1912.10659v2.pdf) 2019 Dec 
+
+2019 Dec 
+["Graph-Based Parallel Large Scale Structure from Motion"](https://arxiv.org/pdf/1912.10659v2.pdf)
 
 ## factor graph
 2019 Sep 

@@ -19,6 +19,9 @@
 2020 ICLR
 ["DeepV2D: Video to Depth with Differentiable Structure from Motion"](https://openreview.net/pdf?id=HJeO7RNKPr)
 
+2019 Dec
+[“Self-Supervised 3D Keypoint Learning for Ego-motion Estimation”](https://arxiv.org/pdf/1912.03426v3.pdf)
+
 ## feature description
 
 2018 NeurIPS
@@ -31,6 +34,12 @@
 
 2015 Oct
 ["ENFT: Efficient Non-Consecutive Feature Tracking for Robust Structure-from-Motion"](https://arxiv.org/pdf/1510.08012v2.pdf)
+
+## feature matching
+
+2020 Jun
+[“AdaLAM: Revisiting Handcrafted Outlier Detection”](https://arxiv.org/pdf/2006.04250v1.pdf)
+
 
 ## bundle adjustment
 

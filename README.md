@@ -24,7 +24,7 @@
 ["DeepV2D: Video to Depth with Differentiable Structure from Motion"](https://openreview.net/pdf?id=HJeO7RNKPr)
 
 2019 Dec
-[“Self-Supervised 3D Keypoint Learning for Ego-motion Estimation”](https://arxiv.org/pdf/1912.03426v3.pdf)
+["Self-Supervised 3D Keypoint Learning for Ego-motion Estimation"](https://arxiv.org/pdf/1912.03426v3.pdf)
 
 
 ## feature description
@@ -45,7 +45,7 @@
 ## feature matching
 
 2020 Jun
-[“AdaLAM: Revisiting Handcrafted Outlier Detection”](https://arxiv.org/pdf/2006.04250v1.pdf)
+["AdaLAM: Revisiting Handcrafted Outlier Detection"](https://arxiv.org/pdf/2006.04250v1.pdf)
 
 
 ## bundle adjustment

@@ -102,7 +102,9 @@ factor graphs
 非连续特征Tracking
 
 > SfM很依赖feature tracking
+
 > 对于图片序列：对象移动、偶然遮挡、图片噪声如果处理不好，SfM效果不好
+
 > 大规模重建越明显
 
 ENFT用于match被打断的tracking（不同图片子序列，甚至不同video）

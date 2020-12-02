@@ -34,9 +34,9 @@
 ### global
 #### ["Global Structure-from-Motion by Similarity Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Cui_Global_Structure-From-Motion_by_ICCV_2015_paper.pdf) 2015 ICCV
 
-> 已知：images，由5点算法计算的E，EG graph
+已知：images，由5点算法计算的E，EG graph
 
-> 求 $R_{ij} = R_i * R_j^T$，$t_{ij} \sim R_j * (c_i - cj)$
+$R_{ij} = R_i * R_j^T$，$t_{ij} \sim R_j * (c_i - cj)$
 
 <a name="multi-stage"></a>
 ### multi-stage

@@ -98,6 +98,13 @@
     
     images 和 points 分为 2 个 set：affected 和 unaffected
     
+
+#### ["Towards Linear-time Incremental Structure from Motion"](http://ccwu.me/vsfm/vsfm.pdf) 2013 3DV
+
++ preemptive feature matching
++ preconditioned conjugate gradient
++ reduce scene graph
+
 <a name="global"></a>
 ### global
 #### ["Global Structure-from-Motion by Similarity Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Cui_Global_Structure-From-Motion_by_ICCV_2015_paper.pdf) 2015 ICCV
@@ -126,6 +133,7 @@
 
 + final BA：camera、3D points
     
+#### ["combining two-view constraints for motion estimation"]() 2001 CVPR
 
 <a name="multi-stage"></a>
 ### multi-stage

@@ -25,6 +25,8 @@
     - [fundamental matrix](#fundamental-matrix)
     - [factorization](#factorization)
     - [optimization](#optimization)
+    - [mesh](#mesh)  
+    - [stereo](#stereo)
     - [tips](#tips)
 
 <a name="papers"></a>
@@ -540,6 +542,26 @@ Many algorithms exist for structurally simple forests including coniferous fores
 #### ["A Unified Optimization Framework for Low-Rank Inducing Penalties"](http://openaccess.thecvf.com/content_CVPR_2020/papers/Ornhag_A_Unified_Optimization_Framework_for_Low-Rank_Inducing_Penalties_CVPR_2020_paper.pdf) 2020 CVPR
 
 + 两者正则化：unbiased non-convex formulations + weighted nuclear norm penalties
+
+<a name="mesh"></a>
+### mesh
+#### ["Meshlet Priors for 3D Mesh Reconstruction"](https://openaccess.thecvf.com/content_CVPR_2020/papers/Badki_Meshlet_Priors_for_3D_Mesh_Reconstruction_CVPR_2020_paper.pdf) 2020 CVPR
+
+> sota OccNet、AtlasNet，不能很好处理物体的先验和物体姿态之间的关系
+
++ 不在训练集的物品，其局部特征可能在训练集中类似的物体上存在
++ meshlet: a dictionary of basic shape features
+
+<a name="stereo"></a>
+### stereo
+#### ["DPSNET: END-TO-END DEEP PLANE SWEEP STEREO"](https://openreview.net/pdf?id=ryeYHi0ctQ) 2019 ICLR
+
+对比 DeMoN、COLMAP、DeepMVS
+
++ warping through lth plane （sweep）？
++ Feature Volume
++ Cost Volume
++ Cost Fusion
 
 <a name="tips"></a>
 ### tips

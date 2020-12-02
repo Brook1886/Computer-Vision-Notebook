@@ -5,6 +5,7 @@
 ## contents
 
 - [papers](#papers)
+    - [global](#global)
     - [multi-stage](#multi-stage)
     - [graph-based](#graph-based)
     - [factor graph](#factor-graph)
@@ -29,6 +30,14 @@
 <a name="papers"></a>
 ## papers
 
+<a name="global"></a>
+### global
+#### ["Global Structure-from-Motion by Similarity Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Cui_Global_Structure-From-Motion_by_ICCV_2015_paper.pdf) 2015 ICCV
+
+> 已知：images，由5点算法计算的E，EG graph
+
+> 求 $R_{ij} = R_i * R_j^T$，$t_{ij} \sim R_j * (c_i - cj)$
+
 <a name="multi-stage"></a>
 ### multi-stage
 #### ["HSfM: Hybrid Structure-from-Motion"](https://openaccess.thecvf.com/content_cvpr_2017/papers/Cui_HSfM_Hybrid_Structure-from-Motion_CVPR_2017_paper.pdf) 2017 ICCV
@@ -45,7 +54,7 @@
 
     + Community
     
-        Community detection -> divide a graph (epipolar geometry graph, EG) into groups with denser connections inside and sparser connections outside
+        Community detection -> divide a graph (epipolar geometry graph, EG graph) into groups with denser connections inside and sparser connections outside
     
         定义一个 modularity indicator Q，尝试合并两个节点，如果 Q 增加大于一定阈值（0.4）的分为两个 community
         

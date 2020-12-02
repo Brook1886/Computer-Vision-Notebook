@@ -2,36 +2,41 @@
 
 关于SfM学习的记录，持续更新
 
-## contents
+# contents
 
 - [papers](#papers)
-    - [incremental ](#incremental)
-    - [global](#global)
-    - [multi-stage](#multi-stage)
-    - [graph-based](#graph-based)
-    - [factor graph](#factor-graph)
-    - [depth](#depth)
-    - [feature](#feature)
-    - [outlier](#outlier)
-    - [bundle adjustment](#bundle-adjustment)
-    - [localization](#localization)
-    - [calibration](#calibration)
-    - [motion](#motion)
-    - [non-rigid](#non-rigid)
-    - [distortion](#distortion)
-    - [parallel](#parallel)
-    - [disambiguation](#disambiguation)
-    - [camera model](#camera-model)
-    - [segmentation](#segmentation)
-    - [fundamental matrix](#fundamental-matrix)
-    - [factorization](#factorization)
-    - [optimization](#optimization)
-    - [mesh](#mesh)  
-    - [stereo](#stereo)
-    - [tips](#tips)
+    - [SfM](#SfM)
+        - [incremental ](#incremental)
+        - [global](#global)
+        - [multi-stage](#multi-stage)
+        - [graph-based](#graph-based)
+        - [factor graph](#factor-graph)
+        - [depth](#depth)
+        - [feature](#feature)
+        - [outlier](#outlier)
+        - [bundle adjustment](#bundle-adjustment)
+        - [localization](#localization)
+        - [calibration](#calibration)
+        - [motion](#motion)
+        - [non-rigid](#non-rigid)
+        - [distortion](#distortion)
+        - [parallel](#parallel)
+        - [disambiguation](#disambiguation)
+        - [camera model](#camera-model)
+        - [segmentation](#segmentation)
+        - [fundamental matrix](#fundamental-matrix)
+        - [factorization](#factorization)
+        - [optimization](#optimization)
+        - [mesh](#mesh)  
+        - [stereo](#stereo)
+        - [tips](#tips)
+    - [MVS](#MVS)
 
 <a name="papers"></a>
-## papers
+# papers
+
+<a name="SfM"></a>
+## SfM
 
 <a name="incremental"></a>
 ### incremental
@@ -701,3 +706,6 @@ LineSfM
 + 用bifocal估计相对scale变化
 + use trifocal info for line and/or point features
 + parameterless RANSAC-like approach -> robust
+
+<a name="MVS"></a>
+## MVS

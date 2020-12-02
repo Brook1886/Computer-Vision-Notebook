@@ -32,6 +32,14 @@
 ### multi-stage
 #### ["HSfM: Hybrid Structure-from-Motion"](https://openaccess.thecvf.com/content_cvpr_2017/papers/Cui_HSfM_Hybrid_Structure-from-Motion_CVPR_2017_paper.pdf) 2017 ICCV
 
+> incremental 鲁棒、精度高，但是效率较低
+
+> global 对outliers敏感
+
+> accuracy + robustness + efficiency 都拿？
+
++ an adaptive community-based rotation averaging -> camera rotations
++ camera rotations -> camera centers (incremental way)
 
 <a name="graph-based"></a>
 ### graph-based

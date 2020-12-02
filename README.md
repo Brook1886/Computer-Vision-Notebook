@@ -263,4 +263,4 @@ LineSfM
 
 + 用bifocal估计相对scale变化
 + use trifocal info for line and/or point features
-+ parameterless RANSAC-like approach  robust
++ parameterless RANSAC-like approach -> robust

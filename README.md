@@ -1,5 +1,3 @@
-<script   id="MathJax-script" <strong>async </strong>src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script>
-
 # SfM-Notebook
 
 关于SfM学习的记录，持续更新
@@ -36,10 +34,28 @@
 ### global
 #### ["Global Structure-from-Motion by Similarity Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Cui_Global_Structure-From-Motion_by_ICCV_2015_paper.pdf) 2015 ICCV
 
-已知：images，由5点算法计算的E，EG graph
+已知：images，由5点算法计算的E，EG graph；求：朝向R和相机中心c
 
-\\R_{ij} = R_i * R_j^T\\
-\\t_{ij} \sim R_j * (c_i - cj)\\
++ EG graph
+
++ depth images
+
++ optional：1）local BA；2）missing correspondence分析
+
++ 相似度平均
+    
+    register cameras
+    
+    rotation averaging -> 相机朝向
+    
+    scale averaging -> global scale of depth images
+    
+    scale-aware translation averaging -> basline length, camera postion
+    
++ 多视图三角测量
+
++ final BA：camera、3D points
+    
 
 <a name="multi-stage"></a>
 ### multi-stage

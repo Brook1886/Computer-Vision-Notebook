@@ -39,6 +39,7 @@
 > accuracy + robustness + efficiency 都拿？
 
 + an adaptive community-based rotation averaging -> camera rotations
+    
     Community detection -> divide a graph (epipolar geometry graph, EG) into groups with denser connections inside and sparser connections outside
     
 + camera rotations -> camera centers (incremental way)

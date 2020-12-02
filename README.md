@@ -4,12 +4,13 @@
 ## contents
 
 - [papers](#papers)
+    - ["NeuRoRA: Neural Robust Rotation Averaging"](#NeuRoRA: Neural Robust Rotation Averaging)
 
 <a name="papers"></a>
 ## papers
 ### graph-based
-#### "NeuRoRA: Neural Robust Rotation Averaging" 2020 ECCV [pdf](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123690137.pdf)
 
+<a name="NeuRoRA: Neural Robust Rotation Averaging"></a>
 #### 2020 ECCV ["NeuRoRA: Neural Robust Rotation Averaging"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123690137.pdf)
 
 2019 Dec 

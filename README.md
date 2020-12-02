@@ -133,6 +133,40 @@
 
 + final BA：camera、3D points
     
+#### ["Robust Camera Location Estimation by Convex Programming"](https://web.math.princeton.edu/~amits/publications/CVPR2015-SfM-Published.pdf) 2015 IEEE
+
++ 估计 camera location 和 orientation
+
++ LUD least unsquared deviations
+
+
+#### ["Robust Global Translations with 1DSfM"](http://www.cs.cornell.edu/projects/1dsfm/docs/1DSfM_ECCV14.pdf) 2014 ECCV
+
++ 使用 L1-IELS 算法，根据 relative rotation 估计 global rotation
+
+> BA 效果与 init 强相关
+
++ outliers removal
+
+    投影到 1-dim 上，根据outliers在某方向满足顺序约束，某方向不满足来筛选outliers
+    
+    minimum feedback arc set（MFAS）算法
+    
++ slove global translation
+
+    设置目标函数，使用弦距离（chordal distance）
+
+    
+#### ["Efficient and Robust Large-Scale Rotation Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.pdf) 2013 ICCV
+
++ Lie-Algebraic Relative Rotation Averaging 算法
+
+    robust rotation averaging 看作回归问题或 M-estimator
+    
++ Iteratively Reweighted Least Squares（IRLS）算法
+
++ L1-IRLS 算法
+
 #### ["combining two-view constraints for motion estimation"]() 2001 CVPR
 
 <a name="multi-stage"></a>

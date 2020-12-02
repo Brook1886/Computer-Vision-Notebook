@@ -28,10 +28,12 @@
         - [factorization](#factorization)
         - [optimization](#optimization)
         - [mesh](#mesh)  
-        - [stereo](#stereo)
+        - [stereo](#stereo)  
+        - [privacy](#privacy)
         - [tips](#tips)
     - [MVS](#MVS)
         - [point cloud](#point-cloud)
+        - [surface](#surface)
 
 <a name="papers"></a>
 # papers
@@ -481,6 +483,9 @@ Aachen Day-Night dataset 有47%提升
 
 <a name="calibration"></a>
 ### calibration
+
+#### ["Calibration-free Structure-from-Motion with Calibrated Radial Trifocal Tensors"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500375.pdf) 2020 ECCV
+
 #### ["Infrastructure-based Multi-Camera Calibration using Radial Projections"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123610324.pdf) 2020 ECCV
 
 > 多相机系统，已知相机内参，估计外参
@@ -679,6 +684,13 @@ Many algorithms exist for structurally simple forests including coniferous fores
 + Cost Volume
 + Cost Fusion
 
+<a name="privacy"></a>
+### privacy
+
+#### ["Privacy Preserving Structure-from-Motion"](https://www.microsoft.com/en-us/research/uploads/prod/2020/08/Geppert2020ECCV-1.pdf) 2020 ECCV
+
++ 将2D/3D特征点转换为随机的2D/3D线
+
 <a name="tips"></a>
 ### tips
 #### ["Dehazing Cost Volume for Deep Multi-view Stereo in Scattering Media with Airlight and Scattering Coefficient Estimation"](https://arxiv.org/pdf/2011.09114v1.pdf) 2020 Nov
@@ -741,3 +753,12 @@ depth map：1）fuse into point cloud；2）volumetric 表达（voxel grid、Del
 + patch match 性能较强
 
     随机某个点的 patch，再估计领域点
+
+<a name="surface"></a>
+### surface
+
+#### ["Scalable Surface Reconstruction from Point Clouds with Extreme Scale and Density Diversity"](https://openaccess.thecvf.com/content_cvpr_2017/papers/Mostegel_Scalable_Surface_Reconstruction_CVPR_2017_paper.pdf) 2017 CVPR
+
++ a combiantion of: 1) octree data partitioning + 2) delaunay tetrahedralization + 3) graph cut
+
+> 现有的 mulit-scale surface reconstruction focus on：1）局部尺度变化；2）获取封闭网络，基于全局

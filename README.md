@@ -5,6 +5,7 @@
 ## contents
 
 - [papers](#papers)
+    - [incremental ](#incremental)
     - [global](#global)
     - [multi-stage](#multi-stage)
     - [graph-based](#graph-based)
@@ -31,6 +32,27 @@
 
 <a name="papers"></a>
 ## papers
+
+<a name="incremental"></a>
+### incremental
+#### ["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
+
++ scene graph augmentation
+    + 估计基本矩阵F，当inliers >= NF, image pair 几何匹配
+    + 根据决定H的inliers数目NH划分H
+        
+        GRIC法
+        
+        如果 NH / NF < eHF, camera 在同一个场景移动
+        
+    + 对于标定好的相机
+    
+        E 本质矩阵，NE / NF > eEF, 说明标定正确
+        
+        分解E、三角测量、median triangulation angle \alpth_m, 可区分pure rotation、planar scenes
+        
+    + 辨别 WTF（watermarks、timestamps frames）不加入 scene graph
+    + valid pairs
 
 <a name="global"></a>
 ### global
@@ -557,6 +579,8 @@ Many algorithms exist for structurally simple forests including coniferous fores
 #### ["DPSNET: END-TO-END DEEP PLANE SWEEP STEREO"](https://openreview.net/pdf?id=ryeYHi0ctQ) 2019 ICLR
 
 对比 DeMoN、COLMAP、DeepMVS
+
+基于 cost colume 的 mulit-view stereo
 
 + warping through lth plane （sweep）？
 + Feature Volume

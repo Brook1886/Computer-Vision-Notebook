@@ -43,13 +43,13 @@
         
         GRIC法
         
-        如果 NH / NF < eHF, camera 在同一个场景移动
+        如果 N_H / N_F < \epsilon_{HF}, camera 在同一个场景移动
         
     + 对于标定好的相机
     
-        E 本质矩阵，NE / NF > eEF, 说明标定正确
+        E 本质矩阵，N_E / N_F > \epsilon_{EF}, 说明标定正确
         
-        分解E、三角测量、median triangulation angle \alpth_m, 可区分pure rotation、planar scenes
+        分解E、三角测量、median triangulation angle \alpha_m, 可区分pure rotation、planar scenes
         
     + 辨别 WTF（watermarks、timestamps frames）不加入 scene graph
     + valid pairs
@@ -61,7 +61,7 @@
     使用 uncertainty-driven 方法
     
     > PnP 相机姿态估计的精度，取决于观察点的数量、及其在images上的分布；
-        没有（有误）相机标定下，估计内参
+    > 没有（有误）相机标定下，估计内参
     
     
 

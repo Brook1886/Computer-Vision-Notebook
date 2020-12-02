@@ -64,6 +64,40 @@
     
     没有（有误）相机标定下，估计内参
     
+    充分地评估会比较耗时、所以近似评估
+    
+    数目越多、分布越均匀 -> score越高
+    
+    按固定大小网格离散化图片，统计score
+    
++ robust and efficient triangulation
+    
+    cheriality constraint
+    
++ BA
+
+    global BA
+    
+    柯西方程 -> loss function
+    
+    solver 分为 sparse direct solver 和 PCG ceres solver
+    
+    radial 畸变参数 -> pure self-calibration
+    
++ Re-trangulation
+
+    pre-BA RT，post-BA RT
+    
+    不增加三角 threshold，而是 track （error 低于 filter阈值）
+    
++ Redundant View Mining
+
+    problem -> submaps
+    
+    camera grouping
+    
+    images 和 points 分为 2 个 set：affected 和 unaffected
+    
 <a name="global"></a>
 ### global
 #### ["Global Structure-from-Motion by Similarity Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Cui_Global_Structure-From-Motion_by_ICCV_2015_paper.pdf) 2015 ICCV

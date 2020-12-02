@@ -127,6 +127,12 @@ ENFT用于match被打断的tracking（不同图片子序列，甚至不同video�
 
 #### ["BA-Net: Dense Bundle Adjustment Network"](https://arxiv.org/pdf/1806.04807v3.pdf) 2018 Jun
 
+dense SfM，基于feature度量的BA
+
+# 多视图几何约束 -> feature-metric error
+# depth parameterization 恢复深度
+# image -> 几个basis depth maps -> 线性组合 -> final depth （via feature-metric BA）
+
 <a name="localization"></a>
 ### localization
 #### ["Reference Pose Generation for Long-term Visual Localization via Learned Features and View Synthesis"](https://arxiv.org/pdf/2005.05179v3.pdf) 2020 May

@@ -45,6 +45,13 @@
 ### factor graph
 #### ["miniSAM: A Flexible Factor Graph Non-linear Least Squares Optimization Framework"](https://arxiv.org/pdf/1909.00903v1.pdf) 2019 Sep
 
+factor graphs
+
+非线性最小二乘优化问题
+
++ an open-source C++/Python framework
++ a wide list of sparse linear solvers
+
 <a name="depth"></a>
 ### depth
 #### ["SeasonDepth: Cross-Season Monocular Depth Prediction Dataset and Benchmark under Multiple Environments"](https://arxiv.org/pdf/2011.04408v1.pdf) 2020 Nov
@@ -52,6 +59,8 @@
 #### ["RidgeSfM: Structure from Motion via Robust Pairwise Matching Under Depth Uncertainty"](https://arxiv.org/pdf/2011.10359v1.pdf) 2020 Nov
 
 #### ["DeepV2D: Video to Depth with Differentiable Structure from Motion"](https://openreview.net/pdf?id=HJeO7RNKPr) 2020 ICLR
+
+输出 motion 和 depth
 
 #### ["Self-Supervised 3D Keypoint Learning for Ego-motion Estimation"](https://arxiv.org/pdf/1912.03426v3.pdf) 2019 Dec
 
@@ -75,6 +84,13 @@
 #### ["LandscapeAR: Large Scale Outdoor Augmented Reality by Matching Photographs with Terrain Models Using Learned Descriptors"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123740290.pdf) 2020 ECCV
 
 #### ["LF-Net: Learning Local Features from Images"](http://papers.nips.cc/paper/7861-lf-net-learning-local-features-from-images.pdf) 2018 NeurIPS
+
++ 利用depth和motion在一个图片里定一个虚拟目标，网络输出用于其他图片
++ 两个分支，限制一个，让另一个可微
++ 在indoor（depth 来自3D传感器）和outdoor（depth来自SfM解的估计） datasets下训练
+
+1. 无监督学习
+2. 60fps QVGA图片（240×320）
 
 #### ["GeoDesc: Learning Local Descriptors by Integrating Geometry Constraints"](http://openaccess.thecvf.com/content_ECCV_2018/papers/Zixin_Luo_Learning_Local_Descriptors_ECCV_2018_paper.pdf) 2018 ECCV
 

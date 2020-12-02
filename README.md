@@ -38,6 +38,8 @@
 
 > accuracy + robustness + efficiency 都拿？
 
+![pipeline](https://github.com/Brook1886/SfM-Notebook/blob/main/image/2017%20HSfM%20Hybrid%20Structure-from-Motion.png)
+
 + an adaptive community-based rotation averaging -> camera rotations
     
     Community detection -> divide a graph (epipolar geometry graph, EG) into groups with denser connections inside and sparser connections outside

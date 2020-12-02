@@ -60,11 +60,10 @@
     
     使用 uncertainty-driven 方法
     
-    > PnP 相机姿态估计的精度，取决于观察点的数量、及其在images上的分布；
-    > 没有（有误）相机标定下，估计内参
+    PnP 相机姿态估计的精度，取决于观察点的数量、及其在images上的分布；
     
+    没有（有误）相机标定下，估计内参
     
-
 <a name="global"></a>
 ### global
 #### ["Global Structure-from-Motion by Similarity Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Cui_Global_Structure-From-Motion_by_ICCV_2015_paper.pdf) 2015 ICCV

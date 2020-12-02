@@ -53,6 +53,17 @@
         
     + 辨别 WTF（watermarks、timestamps frames）不加入 scene graph
     + valid pairs
+    
++ nest best view selection
+    
+    目标：minimize reconstruction error
+    
+    使用 uncertainty-driven 方法
+    
+    > PnP 相机姿态估计的精度，取决于观察点的数量、及其在images上的分布；
+        没有（有误）相机标定下，估计内参
+    
+    
 
 <a name="global"></a>
 ### global

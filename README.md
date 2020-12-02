@@ -4,6 +4,7 @@
 ## contents
 
 - [papers](#papers)
+    - [multi-stage](#multi-stage)
     - [graph-based](#graph-based)
     - [factor graph](#factor-graph)
     - [depth](#depth)
@@ -26,6 +27,11 @@
 
 <a name="papers"></a>
 ## papers
+
+<a name="multi-stage"></a>
+### multi-stage
+#### ["HSfM: Hybrid Structure-from-Motion"](https://github.com/Brook1886/SfM-Notebook/tree/main/HSfM:%20Hybrid%20Structure-from-Motion) 2017 ICCV
+
 <a name="graph-based"></a>
 ### graph-based
 

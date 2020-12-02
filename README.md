@@ -10,8 +10,7 @@
 ### graph-based
 #### "NeuRoRA: Neural Robust Rotation Averaging" 2020 ECCV [pdf](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123690137.pdf)
 
-2020 ECCV
-["NeuRoRA: Neural Robust Rotation Averaging"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123690137.pdf)
+#### 2020 ECCV ["NeuRoRA: Neural Robust Rotation Averaging"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123690137.pdf)
 
 2019 Dec 
 ["Graph-Based Parallel Large Scale Structure from Motion"](https://arxiv.org/pdf/1912.10659v2.pdf)

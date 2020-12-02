@@ -36,6 +36,8 @@
 
 已知：images，由5点算法计算的E，EG graph；求：朝向R和相机中心c
 
+![globalSfM](https://github.com/Brook1886/SfM-Notebook/blob/main/image/2015%20Global%20Structure-from-Motion%20by%20Similarity%20Averaging.png)
+
 + EG graph
 
 + depth images

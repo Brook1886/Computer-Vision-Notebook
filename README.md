@@ -30,7 +30,7 @@
 
 <a name="multi-stage"></a>
 ### multi-stage
-#### ["HSfM: Hybrid Structure-from-Motion"](https://github.com/Brook1886/SfM-Notebook/tree/main/HSfM:%20Hybrid%20Structure-from-Motion) 2017 ICCV
+#### ["HSfM: Hybrid Structure-from-Motion"](https://openaccess.thecvf.com/content_cvpr_2017/papers/Cui_HSfM_Hybrid_Structure-from-Motion_CVPR_2017_paper.pdf) 2017 ICCV [more](https://github.com/Brook1886/SfM-Notebook/tree/main/HSfM:%20Hybrid%20Structure-from-Motion)
 
 <a name="graph-based"></a>
 ### graph-based

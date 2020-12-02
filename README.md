@@ -50,9 +50,13 @@
         
     + rotation averaging
         
-        使用 "Efficient and robust largescale rotation averaging" 方法分别对每个 community 进行 rotation averaging，每个 community 有不同坐标系
+        + 使用 "Efficient and robust largescale rotation averaging" 方法分别对每个 community 进行 rotation averaging，每个 community 有不同坐标系
         
-        a voting scheme （transformation 具有最多的 inliers） -> 合并每个 commutity 的结果
+        + a voting scheme （transformation 具有最多的 inliers） -> 合并每个 commutity 的结果
+        
+        + community 之间连接边加权，weight是最好的 transformation 的 inliers 占比
+        
+        + community 构成的 graph -> construct maximal spanning tree (MST)
     
 + camera rotations -> camera centers (incremental way)
 

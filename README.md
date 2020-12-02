@@ -64,6 +64,16 @@ factor graphs
 
 #### ["Self-Supervised 3D Keypoint Learning for Ego-motion Estimation"](https://arxiv.org/pdf/1912.03426v3.pdf) 2019 Dec
 
+detect and match viewpoint-invariant keypoint
+
+> 基于学习的方法：keypoint 经单应到synthetic views
+
+该方法对非共面且有光照变化的场景不泛化
+
++ video -> 自监督学习具有深度信息的关键点
++ 可微分SfM模型
++ 外观+几何匹配 -> 学习关键点、深度估计
+
 #### ["Single Image Depth Estimation Trained via Depth from Defocus Cues"](http://openaccess.thecvf.com/content_CVPR_2019/papers/Gur_Single_Image_Depth_Estimation_Trained_via_Depth_From_Defocus_Cues_CVPR_2019_paper.pdf) 2019 CVPR
 
 #### ["Geometry meets semantics for semi-supervised monocular depth estimation"](https://arxiv.org/pdf/1810.04093v2.pdf) 2018 Oct
@@ -94,6 +104,8 @@ factor graphs
 
 #### ["GeoDesc: Learning Local Descriptors by Integrating Geometry Constraints"](http://openaccess.thecvf.com/content_ECCV_2018/papers/Zixin_Luo_Learning_Local_Descriptors_ECCV_2018_paper.pdf) 2018 ECCV
 
+整合多视图重建时的几何约束来学习局部特征
+
 #### feature tracking
 #### ["Integration of the 3D Environment for UAV Onboard Visual Object Tracking"](https://arxiv.org/pdf/2008.02834v3.pdf) 2020 Aug
 
@@ -115,6 +127,13 @@ ENFT用于match被打断的tracking（不同图片子序列，甚至不同video�
 #### feature matching
 #### ["AdaLAM: Revisiting Handcrafted Outlier Detection"](https://arxiv.org/pdf/2006.04250v1.pdf) 2020 Jun
 
+Local feature matching
+
+> 匹配包含outliers
+
++ a hierarchical pipeline for effective outlier detection
++ 并行计算，fast
+
 #### ["Robust Line Segments Matching via Graph Convolution Networks"](https://arxiv.org/pdf/2004.04993v2.pdf) 2020 Apr
 
 <a name="outlier"></a>
@@ -129,19 +148,40 @@ ENFT用于match被打断的tracking（不同图片子序列，甚至不同video�
 
 dense SfM，基于feature度量的BA
 
-# 多视图几何约束 -> feature-metric error
-# depth parameterization 恢复深度
-# image -> 几个basis depth maps -> 线性组合 -> final depth （via feature-metric BA）
++ 多视图几何约束 -> feature-metric error
++ depth parameterization 恢复深度
++ image -> 几个basis depth maps -> 线性组合 -> final depth （via feature-metric BA）
 
 <a name="localization"></a>
 ### localization
 #### ["Reference Pose Generation for Long-term Visual Localization via Learned Features and View Synthesis"](https://arxiv.org/pdf/2005.05179v3.pdf) 2020 May
+
+视觉定位
+
+> SfM依赖局部特征，外部环境变化易失败
+
+> 手工标注特征对应可能不准确
+
++ 学习到的特征（3D模型和图片之间匹配到的特征）-> pose
++ 半自动
+
+Aachen Day-Night dataset 有47%提升
 
 #### ["Cascaded Parallel Filtering for Memory-Efficient Image-Based Localization"](http://openaccess.thecvf.com/content_ICCV_2019/papers/Cheng_Cascaded_Parallel_Filtering_for_Memory-Efficient_Image-Based_Localization_ICCV_2019_paper.pdf) 2019 ICCV
 
 <a name="calibration"></a>
 ### calibration
 #### ["Infrastructure-based Multi-Camera Calibration using Radial Projections"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123610324.pdf) 2020 ECCV
+
+> 多相机系统，已知相机内参，估计外参
+
+using 3D map
+
+假设畸变主要为径向
+
++ 先初步估计每个相机的外参，再求内参和精确的外参
+
+1. 比先估计内参和姿态、再求外参的方法鲁棒
 
 <a name="motion"></a>
 ### motion
@@ -150,6 +190,12 @@ dense SfM，基于feature度量的BA
 #### ["Resultant Based Incremental Recovery of Camera Pose from Pairwise Matches"](https://arxiv.org/pdf/1901.09364v1.pdf) 2019 Jan
 
 #### ["Flow-Motion and Depth Network for Monocular Stereo and Beyond"](https://arxiv.org/pdf/1909.05452v1.pdf) 2019 Sep
+
++ 2 images、intrinsic -> pose、depth map
++ network估计 光流和相机姿态
++ 三角测量层encode光流和相机姿态
++ target images的depth -> network -> 估计source image的depth
++ 提供给网络训练的数据集
 
 #### ["Trifocal Relative Pose from Lines at Points and its Efficient Solution"](https://arxiv.org/pdf/1903.09755v3.pdf) 2019 Mar
 
@@ -207,3 +253,14 @@ dense SfM，基于feature度量的BA
 
 #### ["Robust SfM with Little Image Overlap"](https://arxiv.org/pdf/1703.07957v2.pdf) 2017 Mar
 
+LineSfM
+
+> 传统SfM至少需要trifocal的overlaps
+
+> 减少overlap行不行：图之间只保证有重叠
+
+假设line coplanarity
+
++ 用bifocal估计相对scale变化
++ use trifocal info for line and/or point features
++ parameterless RANSAC-like approach  robust

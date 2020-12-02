@@ -8,6 +8,7 @@
     - [SfM](#SfM)
         - [incremental ](#incremental)
         - [global](#global)
+        - [hierarchical](#hierarchical)
         - [multi-stage](#multi-stage)
         - [graph-based](#graph-based)
         - [factor graph](#factor-graph)
@@ -154,11 +155,11 @@
 
 > BA 效果与 init 强相关
 
-+ outliers removal
++ outliers removal，全局SfM主要挑战：outliers，求global camera rotations，再求 translations
 
     投影到 1-dim 上，根据outliers在某方向满足顺序约束，某方向不满足来筛选outliers
     
-    minimum feedback arc set（MFAS）算法
+    minimum feedback arc set（MFAS）算法，最小反馈边集合
     
 + slove global translation
 
@@ -175,7 +176,12 @@
 
 + L1-IRLS 算法
 
-#### ["combining two-view constraints for motion estimation"]() 2001 CVPR
+<a name="hierarchical"></a>
+### hierarchical
+
+#### ["Hierarchical structure-and-motion recovery from uncalibrated images"](https://arxiv.org/pdf/1506.00395) 2015 Jun
+
+dubbed SAMANTHA
 
 <a name="multi-stage"></a>
 ### multi-stage
@@ -243,11 +249,34 @@
 
 将大规模SfM问题，看作graph问题
 
-+ images cluster
-+ 最大生成树expand图片
-+ local reconstruction
+特征匹配后，使用 cluster，并行体现在不同聚类可以同时 SfM
+
++ 特征提取、匹配，filter outliers，images cluster
+    
+    graph cut，weak connection
+    
+    最大生成树expand图片，增加连接性
+    
++ local reconstruction（incremental SfM）in parallel，merge local map，re-triangulation，bundle adjestment
+
 + 最小生成树获取精确的相似变换
-+ 最小高度树找到合适的anchor node，减少误差累计 
+
++ 最小高度树找到合适的anchor node，减少误差累计
+
+#### ["GraphMatch: Efficient Large-Scale Graph Construction for Structure from Motion"](https://arxiv.org/pdf/1710.01602) 2017 Oct
+
+对比 vocabulary trees 方法，如 BRIAD
+
++ 使用 fisher distance
++ sample-and-propagate 机制
+
+#### ["Graph-Based Consistent Matching for Structure-from-Motion"](http://www.eccv2016.org/files/posters/P-2A-19.pdf) 2016 ECCV
+
+unordered images
+
++ visual- similarity-based minimum spanning tree 最小生成树
+
++ global community-based graph 算法
 
 <a name="factor-graph"></a>
 ### factor graph
@@ -281,6 +310,18 @@ indoor
 
 输出 motion 和 depth
 
+#### ["Consistent Video Depth Estimation"](https://arxiv.org/pdf/2004.15021.pdf) 2020 Aug
+
+> a monocular video -> depth map
+
++ 传统 SfM -> video 里的几何约束
+
+    ad-hoc 先验改为学习先验
+    
+    用 CNN 输出 single-image depth estimation
+    
++ fine-tune 网络 满足几何约束
+
 #### ["Self-Supervised 3D Keypoint Learning for Ego-motion Estimation"](https://arxiv.org/pdf/1912.03426v3.pdf) 2019 Dec
 
 detect and match viewpoint-invariant keypoint
@@ -300,6 +341,18 @@ defocus cues 散焦视差
 + Point Spread Function：conv layer、散光圈（Circle-Of-Confusion）
 
 KITTI and Make3D 数据集
+
+#### ["MegaDepth: Learning Single-View Depth Prediction from Internet Photos"](https://openaccess.thecvf.com/content_cvpr_2018/papers/Li_MegaDepth_Learning_Single-View_CVPR_2018_paper.pdf) 2018 CVPR
+
+> 基于 deep learning 的单视图深度预测： 困难，没有有效的（available）训练数据
+
+> NYU 只有室内；Make3D 种类少；KITTI sparse sample
+
++ 找 Internet photos -> SfM MVS -> Mega Depth (大量 depth 数据集）
+
++ 难点：MVS -> data，由于noise、不可重建物体存在
+    
+    解决：data cleaning，auto augment，如 semantic segmentation
 
 #### ["Geometry meets semantics for semi-supervised monocular depth estimation"](https://arxiv.org/pdf/1810.04093v2.pdf) 2018 Oct
 
@@ -399,6 +452,13 @@ low-altitude oblique view，image sequences
 
 todo：SfM结合去动态物体算法
 
+#### ["Fast connected components computation in large graphs by vertex pruning"](http://for.unipi.it/alessandro_lulli/files/2015/07/J002_FastConnectedComponentsComputationInLargeGraphsByVertexPruning.pdf) 2016 Jul
+
+一种图算法
+
++ 提出 iterative Map Reduce 算法
++ CRACKER
+
 #### ["ENFT: Efficient Non-Consecutive Feature Tracking for Robust Structure-from-Motion"](https://arxiv.org/pdf/1510.08012v2.pdf) 2015 Oct
 
 非连续特征Tracking
@@ -444,6 +504,9 @@ Local feature matching
 
 <a name="bundle-adjustment"></a>
 ### bundle adjustment
+
+#### ["DeepSFM: Structure From Motion Via Deep Bundle Adjustment"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460222.pdf) 2020 ECCV
+
 #### ["RPBA -- Robust Parallel Bundle Adjustment Based on Covariance Information"](https://arxiv.org/pdf/1910.08138v1.pdf) 2019 Oct
 
 并行BA
@@ -543,6 +606,18 @@ mixed point、line correspondences、three views
 
 > Classical NRSfM 方法不能 handle 大规模图集且只能处理少数 shape
 > 当前仍然有的问题：不能 handle missing/occluded points；仅仅弱透视相机模型
+
+#### ["C3DPO: Canonical 3D Pose Networks for Non-Rigid Structure From Motion"](https://arxiv.org/pdf/1909.02533.pdf) 2019 Oct
+
+deformable object（2d key point in images）-> extract -> 3D models
+
++ 同时考虑：1）partial occlusion；2）viewpoint change；3）object deformation
+
++ 正则化
+
++ partial occlusion，成功的先觉条件：重建shape具有确切的 canonicalization function
+
++ 不需要 GT 来监督
 
 #### ["DefSLAM: Tracking and Mapping of Deforming Scenes from Monocular Sequences"](https://arxiv.org/pdf/1908.08918v2.pdf) 2019 Aug
 
@@ -683,6 +758,21 @@ Many algorithms exist for structurally simple forests including coniferous fores
 + Feature Volume
 + Cost Volume
 + Cost Fusion
+
+#### ["DeMoN: Depth and Motion Network for Learning Monocular Stereo"](https://arxiv.org/pdf/1612.02401) 2017 CVPR
+
+将 SfM 看作学习问题
+
++ image pairs -> CNN -> depth、camera motion
++ CNN： multiple stacked encoder-decoder
+
++ 除了 depth、motion，还估计：1）surface normal；2）optical flow between the imgae；3）confidence of the matching
+
++ loss = spatial relative differences
+
+1. 相比传统 two-frame SfM，更 accurate、robust
+2. 相比 depth-from-single-image network，更 generalization
+
 
 <a name="privacy"></a>
 ### privacy

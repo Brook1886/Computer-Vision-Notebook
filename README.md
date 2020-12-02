@@ -65,8 +65,20 @@
         
         5-point algorithm -> the inlier number of feature matchings; angles 表征 length of baseline; neighbors of the camera 表征 camera poses accuracy
         
-        recalculate its relative rotations R_ij ->  relative translation t_ij
-
+        recalculate its relative rotations Rij ->  relative translation tij, 使用 RANSAC
+        
+    + Camera Registration
+    
+        RANSAC -> find best camera center (has the largest number of visible scene points inliers)
+        
+        visible scene points 多，但camera center误差还大，说明 camera rotations 就估计的不准，使用 P3P 直接计算一个 camera pose
+        
+    + 基于 RANSAC 的 triangulation
+        
+        每轮迭代，随机选两个views，如果angle between two projection rays 小于3度，直接用DLT；检查 cheirality；重投影误差小，接受
+        
+    其他技巧：Huber function；Re-Triangulation + BA
+        
 <a name="graph-based"></a>
 ### graph-based
 

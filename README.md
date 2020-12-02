@@ -15,6 +15,14 @@
 
 #### ["Graph-Based Parallel Large Scale Structure from Motion"](https://arxiv.org/pdf/1912.10659v2.pdf) 2019 Dec
 
+将大规模SfM问题，看作graph问题
+
++ images cluster
++ 最大生成树expand图片
++ local reconstruction
++ 最小生成树获取精确的相似变换
++ 最小高度树找到合适的anchor node，减少误差累计 
+
 ### factor graph
 #### ["miniSAM: A Flexible Factor Graph Non-linear Least Squares Optimization Framework"](https://arxiv.org/pdf/1909.00903v1.pdf) 2019 Sep
 

@@ -31,6 +31,13 @@
 
 #### ["NeuRoRA: Neural Robust Rotation Averaging"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123690137.pdf) 2020 ECCV 
 
+> robust cost functions 非线性、且基于噪声和outliers的分布假设
+
++ view-graph cleaning network（noise、outliers）+ fine-tune network
++ 用合成graphs训练
+
+1. graph-based network可以用于其他graph-based geometric problems，像pose-graph optimization
+
 #### ["Graph-Based Parallel Large Scale Structure from Motion"](https://arxiv.org/pdf/1912.10659v2.pdf) 2019 Dec
 
 将大规模SfM问题，看作graph问题
@@ -56,7 +63,18 @@ factor graphs
 ### depth
 #### ["SeasonDepth: Cross-Season Monocular Depth Prediction Dataset and Benchmark under Multiple Environments"](https://arxiv.org/pdf/2011.04408v1.pdf) 2020 Nov
 
+季节、光照变换，缺乏数据集和基准
+
 #### ["RidgeSfM: Structure from Motion via Robust Pairwise Matching Under Depth Uncertainty"](https://arxiv.org/pdf/2011.10359v1.pdf) 2020 Nov
+
+同时估计dense depth map和camera poses
+indoor
+
+传统分两步：1）相机估计；2）MVS
+
++ deep net -> "depth-planes" 线性组合 -> depth map
++ altered BA -> poses、dense reconstructions
++ high-quality sparse keypoint matches -> 优化：1）前一帧 "depth-planes" 线性组合；2）相机姿态
 
 #### ["DeepV2D: Video to Depth with Differentiable Structure from Motion"](https://openreview.net/pdf?id=HJeO7RNKPr) 2020 ICLR
 
@@ -76,22 +94,81 @@ detect and match viewpoint-invariant keypoint
 
 #### ["Single Image Depth Estimation Trained via Depth from Defocus Cues"](http://openaccess.thecvf.com/content_CVPR_2019/papers/Gur_Single_Image_Depth_Estimation_Trained_via_Depth_From_Defocus_Cues_CVPR_2019_paper.pdf) 2019 CVPR
 
+defocus cues 散焦视差
+
++ Point Spread Function：conv layer、散光圈（Circle-Of-Confusion）
+
+KITTI and Make3D 数据集
+
 #### ["Geometry meets semantics for semi-supervised monocular depth estimation"](https://arxiv.org/pdf/1810.04093v2.pdf) 2018 Oct
+
+> single image 缺乏几何信息
+
+> encoder-decoder依赖有效的特征表达
+
++ semantics -> 改善深度的估计
++ image warping loss
++ semi-supervised，semantic使用GT
++ cross-task loss
+
+KITTI
 
 <a name="feature"></a>
 ### feature
 #### keypoint
 #### ["SEKD: Self-Evolving Keypoint Detection and Description"](https://arxiv.org/pdf/2006.05077v1.pdf) 2020 Jun
 
++ local feature detector 与 descriptor 交互
++ 自监督，unlabeled natural images
++ training strategies
+
+1. homography estimation, relative pose estimation, and structure-from-motion tasks
+
 #### ["Neural Outlier Rejection for Self-Supervised Keypoint Learning"](https://openreview.net/pdf?id=Skx82ySYPH) 2020 ICLR
+
+> 学习keypoint的方法有效，训练数据保证兴趣点准确较为困难
+
++ IO-Net (i.e. InlierOutlierNet)
++ 自监督：keypoint检测、描述、匹配
+sample inlier和outlier set
+
++ KeyPointNet -> keypoint检测、描述
++ spatial discretizations
++ subpixel conv，上采用descriptor fmap分辨率，改善描述
 
 #### feature dectect
 #### ["Multi-View Optimization of Local Feature Geometry"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460647.pdf) 2020 ECCV
 
+local feature detect
+
+> 单视图提取关键点来提取特征不准，能否多视图
+
++ 拿不准的match先估计局部几何变换，利用多视图优化关键点位置，最小二乘
+
+1. 能改善三角测量和相机定位
+ 
 #### ["LiFF: Light Field Features in Scale and Depth"](http://openaccess.thecvf.com/content_CVPR_2019/papers/Dansereau_LiFF_Light_Field_Features_in_Scale_and_Depth_CVPR_2019_paper.pdf) 2019 CVPR
+
+解决特征检测、描述
+
+> 场景中light问题：部分遮挡、低对比度、表面反射、折射
+
++ 光场相机
++ 4D光场
++ 尺度不变、4D光场检测特征、对透视变换鲁棒
+
+能提高SfM效果
 
 #### feature description
 #### ["LandscapeAR: Large Scale Outdoor Augmented Reality by Matching Photographs with Terrain Models Using Learned Descriptors"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123740290.pdf) 2020 ECCV
+
+大规模AR
+
++ textured Digital Elevation Models (DEMs)
+
++ 用 SfM 重建出训练数据，训练 a cross-domain feature descriptor
+
++ 可在移动设备上用
 
 #### ["LF-Net: Learning Local Features from Images"](http://papers.nips.cc/paper/7861-lf-net-learning-local-features-from-images.pdf) 2018 NeurIPS
 
@@ -108,6 +185,18 @@ detect and match viewpoint-invariant keypoint
 
 #### feature tracking
 #### ["Integration of the 3D Environment for UAV Onboard Visual Object Tracking"](https://arxiv.org/pdf/2008.02834v3.pdf) 2020 Aug
+
+> 困难：object occlusion, small-scale objects, background clutter, and abrupt camera motion
+
++ 在三维重建的场景中，检测和跟踪
++ a model-free visual object tracker, a sparse 3D reconstruction, and a state estimator
++ representing the position of the target in 3D space rather than in image space
+
+low-altitude oblique view，image sequences
+
+1. 比 plain visual cues 和 image-space-based state estimations 效果好
+
+todo：SfM结合去动态物体算法
 
 #### ["ENFT: Efficient Non-Consecutive Feature Tracking for Robust Structure-from-Motion"](https://arxiv.org/pdf/1510.08012v2.pdf) 2015 Oct
 
@@ -136,13 +225,31 @@ Local feature matching
 
 #### ["Robust Line Segments Matching via Graph Convolution Networks"](https://arxiv.org/pdf/2004.04993v2.pdf) 2020 Apr
 
+直线匹配
+
+纹理较少、重复结构场景，直线匹配更为重要（对SfM，SLAM）
+
++ GCN -> 匹配两图中的直线
++ 直线匹配转换为图的优化问题
+
 <a name="outlier"></a>
 ### outlier
 #### ["Efficient Outlier Removal in Large Scale Global Structure-from-Motion"](https://arxiv.org/pdf/1808.03041v4.pdf) 2018 Aug
 
+> global outlier removal
+
++ a convex relaxed l_1 minimization，可用线性规划（LP）解
++ ideal l_0 minimization，可用an iteratively reweighted method解
+
 <a name="bundle-adjustment"></a>
 ### bundle adjustment
 #### ["RPBA -- Robust Parallel Bundle Adjustment Based on Covariance Information"](https://arxiv.org/pdf/1910.08138v1.pdf) 2019 Oct
+
+并行BA
+
+consensus-based optimization methods
+
++ adjustment 3d point -> covariance information
 
 #### ["BA-Net: Dense Bundle Adjustment Network"](https://arxiv.org/pdf/1806.04807v3.pdf) 2018 Jun
 
@@ -169,6 +276,10 @@ Aachen Day-Night dataset 有47%提升
 
 #### ["Cascaded Parallel Filtering for Memory-Efficient Image-Based Localization"](http://openaccess.thecvf.com/content_ICCV_2019/papers/Cheng_Cascaded_Parallel_Filtering_for_Memory-Efficient_Image-Based_Localization_ICCV_2019_paper.pdf) 2019 ICCV
 
+> Image-based localization (IBL) ：估计 camera poses，规模大SfM如何节省memory
+
++ cascaded parallel filtering：利用feature, visibility and geometry information来filter wrong matches
+
 <a name="calibration"></a>
 ### calibration
 #### ["Infrastructure-based Multi-Camera Calibration using Radial Projections"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123610324.pdf) 2020 ECCV
@@ -187,7 +298,17 @@ using 3D map
 ### motion
 #### ["Relative Pose from Deep Learned Depth and a Single Affine Correspondence"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123570613.pdf) 2020 ECCV
 
++ 结合 non-metric monocular depth + affine correspondences -> 从single correspondence 估计 relative pose
++ 1-point RANSAC approaches
++ 1AC+D solver
+
+使用 global SfM 在 1DSfM 数据集上验证
+
 #### ["Resultant Based Incremental Recovery of Camera Pose from Pairwise Matches"](https://arxiv.org/pdf/1901.09364v1.pdf) 2019 Jan
+
++ six-point online algorithm 恢复外参，incremental 到第n张图片
++ Dixon resultant？
++ Bernstein's theorem？证明了复解个数的严格上下界
 
 #### ["Flow-Motion and Depth Network for Monocular Stereo and Beyond"](https://arxiv.org/pdf/1909.05452v1.pdf) 2019 Sep
 
@@ -199,55 +320,156 @@ using 3D map
 
 #### ["Trifocal Relative Pose from Lines at Points and its Efficient Solution"](https://arxiv.org/pdf/1903.09755v3.pdf) 2019 Mar
 
+> relative pose estimation
+
+mixed point、line correspondences、three views
+
++ 最小化问题：1）3points+1line；2）2points+2lines
++ a suitable homotopy continuation technique
+
+解决2views失败的重建
+
 <a name="non-rigid"></a>
 ### non-rigid
 #### ["Deep NRSfM++: Towards 3D Reconstruction in the Wild"](https://arxiv.org/pdf/2001.10090v1.pdf) 2020 Jan
 
+> non-rigid
+
+2D landmarks stemming？
+
+> Classical NRSfM 方法不能 handle 大规模图集且只能处理少数 shape
+> 当前仍然有的问题：不能 handle missing/occluded points；仅仅弱透视相机模型
+
 #### ["DefSLAM: Tracking and Mapping of Deforming Scenes from Monocular Sequences"](https://arxiv.org/pdf/1908.08918v2.pdf) 2019 Aug
+
+解决deforming scenes
+
++ Shape-from-Template (SfT) + Non-Rigid Structure-from-Motion (NRSfM)
++ deformation tracking thread -> poses、deformation
 
 #### ["Deep Interpretable Non-Rigid Structure from Motion"](https://arxiv.org/pdf/1902.10840v1.pdf) 2019 Feb
 
+> NRSfM问题困难：图片数量；shape变化的handle程度
+
++ DNN -> camera poses、3D点（2D坐标系生成？）
++ DNN 可解释为多层稀疏字典学习问题
++ 基于权重提出一种评估方法，需要多少GT能确保所需置信度
+
 #### ["Structure from Recurrent Motion: From Rigidity to Recurrency"](http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Structure_From_Recurrent_CVPR_2018_paper.pdf) 2018 CVPR
+
+> 解决Non-Rigid Structure-from-Motion (NRSfM)
+
+单目序列video，存在周期性变化
+
++ 转周期性变化为刚性变化
+
++ 以刚性判断来聚类视角
 
 <a name="distortion"></a>
 ### distortion
 #### ["Tangent Images for Mitigating Spherical Distortion"](http://openaccess.thecvf.com/content_CVPR_2020/papers/Eder_Tangent_Images_for_Mitigating_Spherical_Distortion_CVPR_2020_paper.pdf) 2020 CVPR
 
+"tangent images"
+
+球型
+
+二十面体
+
 <a name="parallel"></a>
 ### parallel
 #### ["Parallel Structure from Motion from Local Increment to Global Averaging"](https://arxiv.org/pdf/1702.08601v3.pdf) 2017 Feb
+
+> accurate、consistent
+
+不同于以往靠简化、牺牲精度，企图用并行来加速
+
++ camera clusters with overlapping
++ local increment SfM -> relative poses -> global motion averaging -> accurate and consistent global camera poses
++ track generation + local SfM + 3D point triangulation + bundle adjustment
+
+1. a city-scale data-set (one million high-resolution images)
 
 <a name="disambiguation"></a>
 ### disambiguation
 #### ["Distinguishing the Indistinguishable: Exploring Structural Ambiguities via Geodesic Context"](http://openaccess.thecvf.com/content_cvpr_2017/papers/Yan_Distinguishing_the_Indistinguishable_CVPR_2017_paper.pdf) 2017 CVPR
 
+> 场景里具有重复结构的重建，需disambiguation
+
+当前靠背景纹理来解决，不能解决不清晰场景
+
++ encode global topology
++ viewpoints的流形manifold -> 逼近可用图像
++ 相似的结构造成重建困惑的，实际场景中都相距较远（测地线geodesic）
++ adjacent viewpoint -> adaptively identifying cameras -> manifold
++ geodesic consistency -> detect ambiguities
+
 <a name="camera-model"></a>
 ### camera model
 #### ["Learning Rolling Shutter Correction from Real Data without Camera Motion Assumption"](https://arxiv.org/pdf/2011.03106v1.pdf) 2020 Nov
 
+> rolling shutter会导致图像畸变， 卷帘快门的影响如何矫正
+
++ dnn -> depth、camera poses
++ 该方法无需假设相机 motion，输入图片即可
++ TUM rolling shutter dataset
+
 #### ["Uncertainty Based Camera Model Selection"](http://openaccess.thecvf.com/content_CVPR_2020/papers/Polic_Uncertainty_Based_Camera_Model_Selection_CVPR_2020_paper.pdf) 2020 CVPR
+
+> 相机模型决定SfM重建效果
+
++ 基于不确定性估计自动选择相机模型
+
++ Accuracy-based Criterion
 
 <a name="segmentation"></a>
 ### segmentation
 #### ["Three-dimensional Segmentation of Trees Through a Flexible Multi-Class Graph Cut Algorithm (MCGC)"](https://arxiv.org/pdf/1903.08481v1.pdf) 2019 Mar
 
+> individual tree crown (ITC) 单棵树冠检测问题
+
+Many algorithms exist for structurally simple forests including coniferous forests and plantations.
+
+> 树的种类较多，热带
+
++ local three-dimensional geometry + density information + knowledge of crown allometries -> to segment individual tree crowns from LiDAR point clouds
+
++ 可增加信息，如spectral reflectance
+
 <a name="fundamental-matrix"></a>
 ### fundamental matrix
 #### ["GPSfM: Global Projective SFM Using Algebraic Constraints on Multi-View Fundamental Matrices"](http://openaccess.thecvf.com/content_CVPR_2019/papers/Kasten_GPSfM_Global_Projective_SFM_Using_Algebraic_Constraints_on_Multi-View_Fundamental_CVPR_2019_paper.pdf) 2019 CVPR
+
+> F  恢复P
+
++ n-view fundamental matrix
++ 最小化全局代数误差
+
++ 对比已有方法，无需初始化，结果稳定
 
 <a name="factorization"></a>
 ### factorization
 #### ["Trust No One: Low Rank Matrix Factorization Using Hierarchical RANSAC"](http://openaccess.thecvf.com/content_cvpr_2016/papers/Oskarsson_Trust_No_One_CVPR_2016_paper.pdf) 2016 CVPR
 
+低秩矩阵分解
+
 <a name="optimization"></a>
 ### optimization
 #### ["A Unified Optimization Framework for Low-Rank Inducing Penalties"](http://openaccess.thecvf.com/content_CVPR_2020/papers/Ornhag_A_Unified_Optimization_Framework_for_Low-Rank_Inducing_Penalties_CVPR_2020_paper.pdf) 2020 CVPR
+
++ 两者正则化：unbiased non-convex formulations + weighted nuclear norm penalties
 
 <a name="tips"></a>
 ### tips
 #### ["Dehazing Cost Volume for Deep Multi-view Stereo in Scattering Media with Airlight and Scattering Coefficient Estimation"](https://arxiv.org/pdf/2011.09114v1.pdf) 2020 Nov
 
+> dehazing 去雾，depth 未知，MVS 很难估计 photometric consistency
+
++ deep MVS 来去烟雾
++ dehazing cost volume
+
 #### ["Image Matching across Wide Baselines: From Paper to Practice"](https://arxiv.org/pdf/2003.01587v3.pdf) 2020 Mar
+
+对于局部特征、鲁棒估计的基准算法，SfM可提升性能
 
 #### ["Leveraging Photogrammetric Mesh Models for Aerial-Ground Feature Point Matching Toward Integrated 3D Reconstruction"](https://arxiv.org/pdf/2002.09085v2.pdf) 2020 Feb
 

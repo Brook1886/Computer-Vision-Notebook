@@ -41,10 +41,18 @@
 ![pipeline](https://github.com/Brook1886/SfM-Notebook/blob/main/image/2017%20HSfM%20Hybrid%20Structure-from-Motion.png)
 
 + an adaptive community-based rotation averaging -> camera rotations
+
+    + Community
     
-    Community detection -> divide a graph (epipolar geometry graph, EG) into groups with denser connections inside and sparser connections outside
+        Community detection -> divide a graph (epipolar geometry graph, EG) into groups with denser connections inside and sparser connections outside
     
-    定义一个 modularity indicator Q，Q 增加大于一定阈值（0.4）的分为两个 community
+        定义一个 modularity indicator Q，尝试合并两个节点，如果 Q 增加大于一定阈值（0.4）的分为两个 community
+        
+    + rotation averaging
+        
+        使用 "Efficient and robust largescale rotation averaging" 方法分别对每个 community 进行 rotation averaging，每个 community 有不同坐标系
+        
+        a voting scheme （transformation 具有最多的 inliers） -> 合并每个 commutity 的结果
     
 + camera rotations -> camera centers (incremental way)
 

@@ -1,11 +1,3 @@
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 # SfM-Notebook
@@ -46,7 +38,8 @@
 
 已知：images，由5点算法计算的E，EG graph
 
-$R_{ij} = R_i * R_j^T$，$t_{ij} \sim R_j * (c_i - cj)$
+\\R_{ij} = R_i * R_j^T\\
+\\t_{ij} \sim R_j * (c_i - cj)\\
 
 <a name="multi-stage"></a>
 ### multi-stage

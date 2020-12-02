@@ -44,6 +44,8 @@
     
     Community detection -> divide a graph (epipolar geometry graph, EG) into groups with denser connections inside and sparser connections outside
     
+    定义一个 modularity indicator Q，Q 增加大于一定阈值（0.4）的分为两个 community
+    
 + camera rotations -> camera centers (incremental way)
 
 <a name="graph-based"></a>

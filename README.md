@@ -77,7 +77,7 @@
         
         每轮迭代，随机选两个views，如果angle between two projection rays 小于3度，直接用DLT；检查 cheirality；重投影误差小，接受
         
-    其他技巧：Huber function；Re-Triangulation + BA
++ 其他技巧：Huber function；Re-Triangulation + BA
         
 <a name="graph-based"></a>
 ### graph-based

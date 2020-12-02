@@ -1,4 +1,5 @@
 # SfM-Notebook
+
 关于SfM学习的记录，持续更新
 
 ## contents
@@ -50,15 +51,21 @@
         
     + rotation averaging
         
-        + 使用 "Efficient and robust largescale rotation averaging" 方法分别对每个 community 进行 rotation averaging，每个 community 有不同坐标系
+        使用 "Efficient and robust largescale rotation averaging" 方法分别对每个 community 进行 rotation averaging，每个 community 有不同坐标系
         
-        + a voting scheme （transformation 具有最多的 inliers） -> 合并每个 commutity 的结果
+        a voting scheme （transformation 具有最多的 inliers） -> 合并每个 commutity 的结果
         
-        + community 之间连接边加权，weight是最好的 transformation 的 inliers 占比
+        community 之间连接边加权，weight是最好的 transformation 的 inliers 占比
         
-        + community 构成的 graph -> construct maximal spanning tree (MST)
+        community 构成的 graph -> construct maximal spanning tree (MST)
     
 + camera rotations -> camera centers (incremental way)
+
+    + init，决定 incremental 起始位置
+        
+        5-point algorithm -> the inlier number of feature matchings; angles 表征 length of baseline; neighbors of the camera 表征 camera poses accuracy
+        
+        recalculate its relative rotations R_ij ->  relative translation t_ij
 
 <a name="graph-based"></a>
 ### graph-based

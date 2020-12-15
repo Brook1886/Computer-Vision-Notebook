@@ -2,6 +2,8 @@
 
 关于SfM学习的记录，持续更新
 
+![](https://latex.codecogs.com/svg.latex?\\pi)
+
 # contents
 - [note](#note)
     - [SLAM](#SLAM)

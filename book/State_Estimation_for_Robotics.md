@@ -12,4 +12,10 @@
 
 ### 高斯概率密度
 
+一维
+
 ![](https://latex.codecogs.com/gif.latex?p(x\mid\mu,\sigma^2)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}))
+
+多维
+
+![](https://latex.codecogs.com/gif.latex?p(x\mid\mu,\Sigma)=\frac{1}{\sqrt{(2\pi)^Ndet\Sigma}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu)}))

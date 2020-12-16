@@ -1,6 +1,6 @@
 # 机器人学中的状态估计
 
-> latex: ![](https://latex.codecogs.com/svg.latex?\\pi)
+> latex: ![](https://latex.codecogs.com/svg.latex?\pi)
 
 ## 引言
 

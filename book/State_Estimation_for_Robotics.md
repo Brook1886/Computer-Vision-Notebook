@@ -12,4 +12,4 @@
 
 ### 高斯概率密度
 
-![](https://latex.codecogs.com/svg.latex?p(x\\mid\\mu,\\simga^2))
+![](https://latex.codecogs.com/svg.latex?p(x\\mid\\mu,\\sigma^2))

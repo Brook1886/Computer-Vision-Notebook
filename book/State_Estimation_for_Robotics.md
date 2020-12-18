@@ -3,7 +3,12 @@
 > latex: ![](https://latex.codecogs.com/gif.latex?\pi)
 
 
-$$\pi$$
+$$
+\pi
+$$
+
+<a href="https://latex.codecogs.com/gif.latex?" name="latex"></a>
+![](#latex\pi)
 
 ## 引言
 

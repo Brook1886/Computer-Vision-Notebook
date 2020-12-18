@@ -1,5 +1,7 @@
 # 机器人学中的状态估计
 
+$\pi$
+
 > latex: ![](https://latex.codecogs.com/gif.latex?\pi)
 
 ## 引言

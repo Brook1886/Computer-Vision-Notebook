@@ -5,7 +5,7 @@
 - [note](#note)
 - [papers](#papers)
     - [ORB-SLAM](#ORB-SLAM)
-    - [待阅读](#待阅读)
+    - [阅读](#阅读)
 
 <a name="note"></a>
 # note
@@ -185,7 +185,7 @@ parallel threads:
 
 + close points -> translation; far points -> orientation
 
-<a name="待阅读"></a>
-## 待阅读
+<a name="阅读"></a>
+## 阅读
 
 ### "OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems" [pdf](https://arxiv.org/pdf/2003.08056v1.pdf)

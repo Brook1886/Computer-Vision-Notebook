@@ -18,4 +18,6 @@
 
 多维
 
-![](https://latex.codecogs.com/gif.latex?p(x\mid\mu,\Sigma)=\frac{1}{\sqrt{(2\pi)^{N}det\Sigma}}exp(-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)))
+[latex]:https://latex.codecogs.com/gif.latex?
+
+![]([latex]p(x\mid\mu,\Sigma)=\frac{1}{\sqrt{(2\pi)^{N}det\Sigma}}exp(-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)))

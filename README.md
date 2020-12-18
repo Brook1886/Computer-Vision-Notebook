@@ -857,26 +857,3 @@ depth map：1）fuse into point cloud；2）volumetric 表达（voxel grid、Del
 
 > 现有的 mulit-scale surface reconstruction focus on：1）局部尺度变化；2）获取封闭网络，基于全局
 
-<a name="SLAM"></a>
-## SLAM
-
-<a name="ORB-SLAM"></a>
-### ORB-SLAM
-
-#### ["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
-
-![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)
-
-#### ["ORB-SLAM2: an Open-Source SLAM System forMonocular, Stereo and RGB-D Cameras"](https://arxiv.org/pdf/1610.06475.pdf) 2016 Oct
-
- a complete SLAM systemfor monocular, stereo and RGB-D cameras, including map reuse,loop closing and relocalization capabilities
-
-parallel threads:
-
-1) tracking; 2) local mapping; 3) loop closing; 4) full BA
-
-+ place recongition -> relocalization，用于 tracking 失败、在已经 map 的场景中重新初始化、loop 检测
-
-+ 维护一个co-visibiliy graph（两个关键帧观察到相同的点）和一个最小生成树（连接所有关键帧）
-
-+ close points -> translation; far points -> orientation

@@ -3,7 +3,7 @@
 关于SLAM、SfM、MVS学习的记录，持续更新
 [slam_dir]: ./SLAM/README.md/
 # contents
-- [SLAM](slam_dir#SLAM)
+- [SLAM]([slam_dir]#SLAM)
     - [note](slam_dir#note)
     - [papers](slam_dir#papers)
         - [ORB-SLAM](slam_dir#ORB-SLAM)

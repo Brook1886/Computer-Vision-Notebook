@@ -1,9 +1,8 @@
+<a name="SfM"></a>
+# SfM
 
 <a name="papers"></a>
-# papers
-
-<a name="SfM"></a>
-## SfM
+## papers
 
 <a name="incremental"></a>
 ### incremental

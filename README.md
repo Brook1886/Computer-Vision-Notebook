@@ -4,7 +4,7 @@
 [slam_dir]: ./SLAM/README.md/
 # contents
 - [SLAM]([slam_dir]#SLAM)
-    - [note](slam_dir#note)
+    - [note](#slam_dir#note)
     - [papers](slam_dir#papers)
         - [ORB-SLAM](slam_dir#ORB-SLAM)
 - [SfM](#SfM)

@@ -3,12 +3,12 @@
 关于SfM学习的记录，持续更新
 
 # contents
-- [note](#note)
-    - [SLAM](./SLAM/README.md/#SLAM)
-
-
-- [papers](#papers)
-    - [SfM](#SfM)
+- [SLAM](./SLAM/README.md/#SLAM)
+    - [note](#note)
+    - [papers](#papers)
+        - [ORB-SLAM](#ORB-SLAM)
+- [SfM](#SfM)
+    - [papers](#papers)
         - [incremental ](#incremental)
         - [global](#global)
         - [hierarchical](#hierarchical)
@@ -35,11 +35,10 @@
         - [stereo](#stereo)  
         - [privacy](#privacy)
         - [tips](#tips)
-    - [MVS](#MVS)
+- [MVS](#MVS)
+    - [papers](#papers)
         - [point cloud](#point-cloud)
         - [surface](#surface)
-    - [SLAM](#SLAM)
-        - [ORB-SLAM](#ORB-SLAM)
 
 <a name="note"></a>
 # note

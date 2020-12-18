@@ -18,6 +18,9 @@
 
 多维
 
-[latex]:https://latex.codecogs.com/gif.latex?
+![](https://latex.codecogs.com/gif.latex?p(x\mid\mu,\Sigma)=\frac{1}{\sqrt{(2\pi)^{N}det\Sigma}}exp(-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)))
 
-![latex](p(x\mid\mu,\Sigma)=\frac{1}{\sqrt{(2\pi)^{N}det\Sigma}}exp(-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)))
+![][a]
+
+[latex]:https://latex.codecogs.com/gif.latex?
+[a]:[latex]p(x\mid\mu,\Sigma)=\frac{1}{\sqrt{(2\pi)^{N}det\Sigma}}exp(-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu))

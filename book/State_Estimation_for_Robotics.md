@@ -2,6 +2,9 @@
 
 > latex: ![](https://latex.codecogs.com/gif.latex?\pi)
 
+
+$$\pi$$
+
 ## 引言
 
 机器人：

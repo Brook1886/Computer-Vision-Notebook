@@ -153,3 +153,28 @@
 + 方向：
     
     直接法和特征法结合、IMU、动态场景、语义、长期SLAM、多机器人
+    
+
+<a name="paper"></a>
+# paper
+
+<a name="ORB-SLAM"></a>
+### ORB-SLAM
+
+#### ["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
+
+![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)
+
+#### ["ORB-SLAM2: an Open-Source SLAM System forMonocular, Stereo and RGB-D Cameras"](https://arxiv.org/pdf/1610.06475.pdf) 2016 Oct
+
+ a complete SLAM systemfor monocular, stereo and RGB-D cameras, including map reuse,loop closing and relocalization capabilities
+
+parallel threads:
+
+1) tracking; 2) local mapping; 3) loop closing; 4) full BA
+
++ place recongition -> relocalization，用于 tracking 失败、在已经 map 的场景中重新初始化、loop 检测
+
++ 维护一个co-visibiliy graph（两个关键帧观察到相同的点）和一个最小生成树（连接所有关键帧）
+
++ close points -> translation; far points -> orientation

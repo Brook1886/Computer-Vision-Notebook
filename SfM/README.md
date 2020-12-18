@@ -1,8 +1,37 @@
 <a name="SfM"></a>
 # SfM
 
+# contents
+- [papers](#papers)
+    - [incremental ](#incremental)
+    - [global](#global)
+    - [hierarchical](#hierarchical)
+    - [multi-stage](#multi-stage)
+    - [graph-based](#graph-based)
+    - [factor graph](#factor-graph)
+    - [depth](#depth)
+    - [feature](#feature)
+    - [outlier](#outlier)
+    - [bundle adjustment](#bundle-adjustment)
+    - [localization](#localization)
+    - [calibration](#calibration)
+    - [motion](#motion)
+    - [non-rigid](#non-rigid)
+    - [distortion](#distortion)
+    - [parallel](#parallel)
+    - [disambiguation](#disambiguation)
+    - [camera model](#camera-model)
+    - [segmentation](#segmentation)
+    - [fundamental matrix](#fundamental-matrix)
+    - [factorization](#factorization)
+    - [optimization](#optimization)
+    - [mesh](#mesh)  
+    - [stereo](#stereo)  
+    - [privacy](#privacy)
+    - [tips](#tips)
+
 <a name="papers"></a>
-## papers
+# papers
 
 <a name="incremental"></a>
 ### incremental

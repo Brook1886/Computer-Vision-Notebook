@@ -1,12 +1,12 @@
-# SfM-Notebook
+# -Notebook
 
-关于SfM学习的记录，持续更新
-
+关于SLAM、SfM、MVS学习的记录，持续更新
+[slam_dir]: ./SLAM/README.md/
 # contents
-- [SLAM](./SLAM/README.md/#SLAM)
-    - [note](./SLAM/README.md/#note)
-    - [papers](./SLAM/README.md/#papers)
-        - [ORB-SLAM](./SLAM/README.md/#ORB-SLAM)
+- [SLAM](slam_dir#SLAM)
+    - [note](slam_dir#note)
+    - [papers](slam_dir#papers)
+        - [ORB-SLAM](slam_dir#ORB-SLAM)
 - [SfM](#SfM)
     - [papers](#papers)
         - [incremental ](#incremental)

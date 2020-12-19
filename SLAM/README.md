@@ -4,8 +4,6 @@
 # contents
 - [note](#note)
 - [papers](#papers)
-    - [ORB-SLAM](#ORB-SLAM)
-    - [阅读](#阅读)
 
 <a name="note"></a>
 # note
@@ -159,19 +157,16 @@
 + 方向：
     
     直接法和特征法结合、IMU、动态场景、语义、长期SLAM、多机器人
-    
 
 <a name="papers"></a>
 # papers
 
-<a name="ORB-SLAM"></a>
-## ORB-SLAM
-
-### ["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
+["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
 
 ![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)
 
-### ["ORB-SLAM2: an Open-Source SLAM System forMonocular, Stereo and RGB-D Cameras"](https://arxiv.org/pdf/1610.06475.pdf) 2016 Oct
+
+["ORB-SLAM2: an Open-Source SLAM System forMonocular, Stereo and RGB-D Cameras"](https://arxiv.org/pdf/1610.06475.pdf) 2016 Oct
 
  a complete SLAM systemfor monocular, stereo and RGB-D cameras, including map reuse,loop closing and relocalization capabilities
 
@@ -185,10 +180,7 @@ parallel threads:
 
 + close points -> translation; far points -> orientation
 
-<a name="阅读"></a>
-## 阅读
-
-### ["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) Mar 2020
+["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) Mar 2020
 
 > 问题：
 

@@ -188,11 +188,26 @@ parallel threads:
 <a name="papers"></a>
 # papers
 
-["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) 2020 Mar
+[""]() 2020 Mar
 
-> 问题：
+> 描述：
 >
-> 关键字：**fisheye**，
+> 关键字：****，
 
-+ cameras: ultra-wide field-of-view (FOV) fisheye
+["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) 2020 ICRA
 
+> 描述：利用鱼眼相机实现全方向的SLAM。轻量DNN做各个方向的深度估计，整合深度估计到VO，利用深度估计结果做重投影优化
+>
+> 关键字：**fisheye**，**多目**，**TSDF**，**depth estimation network**
+
+["Tightly coupled 3d lidar inertial odometry and mapping"]() 2019 ICRA
+
+> 描述：
+>
+> 关键字：**LiDAR**，
+
+["Kinectfusion: Real-time dense surface mapping and tracking"]() 2011 ISMAR
+
+> 描述：
+>
+> 关键字：**3D结构光**，

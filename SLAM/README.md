@@ -3,6 +3,8 @@
 
 # contents
 - [note](#note)
+- [openSLAM](#openSLAM)
+    - [ORB-SLAM](#ORB-SLAM)
 - [papers](#papers)
 
 <a name="note"></a>
@@ -158,8 +160,11 @@
     
     直接法和特征法结合、IMU、动态场景、语义、长期SLAM、多机器人
 
-<a name="papers"></a>
-# papers
+<a name="openSLAM"></a>
+# openSLAM
+
+<a name="ORB-SLAM"></a>
+## ORB-SLAM
 
 ["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
 
@@ -180,7 +185,10 @@ parallel threads:
 
 + close points -> translation; far points -> orientation
 
-["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) Mar 2020
+<a name="papers"></a>
+# papers
+
+["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) 2020 Mar
 
 > 问题：
 

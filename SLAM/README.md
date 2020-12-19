@@ -3,8 +3,6 @@
 
 # contents
 - [note](#note)
-- [openSLAM](#openSLAM)
-    - [ORB-SLAM](#ORB-SLAM)
 - [papers](#papers)
 
 <a name="note"></a>
@@ -160,31 +158,6 @@
     
     直接法和特征法结合、IMU、动态场景、语义、长期SLAM、多机器人
 
-<a name="openSLAM"></a>
-# openSLAM
-
-<a name="ORB-SLAM"></a>
-## ORB-SLAM
-
-["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
-
-![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)
-
-
-["ORB-SLAM2: an Open-Source SLAM System forMonocular, Stereo and RGB-D Cameras"](https://arxiv.org/pdf/1610.06475.pdf) 2016 Oct
-
- a complete SLAM systemfor monocular, stereo and RGB-D cameras, including map reuse,loop closing and relocalization capabilities
-
-parallel threads:
-
-1) tracking; 2) local mapping; 3) loop closing; 4) full BA
-
-+ place recongition -> relocalization，用于 tracking 失败、在已经 map 的场景中重新初始化、loop 检测
-
-+ 维护一个co-visibiliy graph（两个关键帧观察到相同的点）和一个最小生成树（连接所有关键帧）
-
-+ close points -> translation; far points -> orientation
-
 <a name="papers"></a>
 # papers
 
@@ -198,7 +171,7 @@ parallel threads:
 
 > 描述：利用鱼眼相机实现全方向的SLAM。轻量DNN做各个方向的深度估计，整合深度估计到VO，利用深度估计结果做重投影优化
 >
-> 关键字：**fisheye**，**多目**，**TSDF**，**depth estimation network**
+> 关键字：**fisheye**，**多目**，**TSDF**，**depth estimation network**，**dense map**
 
 ["Tightly coupled 3d lidar inertial odometry and mapping"]() 2019 ICRA
 
@@ -211,3 +184,69 @@ parallel threads:
 > 描述：
 >
 > 关键字：**3D结构光**，
+
+["Efficient large-scale stereo matching"]() 2010 ACCV
+
+> 描述：
+>
+> 关键字：**dense map**，
+
+["Stereoscan: Dense 3d reconstruction in real-time"]() 2011 IEEE
+
+> 描述：
+>
+> 关键字：**dense map**，
+
+["Ga-net: Guided aggregation net for end-to-end stereo matching"]() 2019 CVPR
+
+> 描述：
+>
+> 关键字：**depth estimation network**，
+
+["Pyramid stereo matching network"]() 2018 CVPR
+
+> 描述：
+>
+> 关键字：**depth estimation network**，
+
+["Occlusions, motion and depth boundaries with a generic network for disparity, optical flow or scene flow estimation"]() 2018 ECCV
+
+> 描述：
+>
+> 关键字：**depth estimation network**，
+
+["Orb: An efficient alternative to sift or surf"]() 2011 ICCV
+
+> 描述：
+>
+> 关键字：**feature descriptor**，
+
+["Orb-slam: a versatile and accurate monocular slam system"]() 2015 IEEE
+
+> 描述：
+>
+> 关键字：**单目**
+
+["ORB-SLAM2: an Open-Source SLAM System forMonocular, Stereo and RGB-D Cameras"](https://arxiv.org/pdf/1610.06475.pdf) 2016 Oct
+
+> 描述：a complete SLAM system for monocular, stereo and RGB-D cameras, including map reuse,loop closing and relocalization capabilities
+>
+> 关键字：**单目**
+
+parallel threads:
+
+1) tracking; 2) local mapping; 3) loop closing; 4) full BA
+
++ place recongition -> relocalization，用于 tracking 失败、在已经 map 的场景中重新初始化、loop 检测
+
++ 维护一个co-visibiliy graph（两个关键帧观察到相同的点）和一个最小生成树（连接所有关键帧）
+
++ close points -> translation; far points -> orientation
+
+["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
+
+> 描述：
+>
+> 关键字：**单目**
+
+![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)

@@ -2,5 +2,5 @@
 
 关于vSLAM、SfM、MVS的学习记录
 
-- [paper](./paper)
-- [note](./note)
+- [papers](./papers)
+- [notes](./notes)

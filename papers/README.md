@@ -33,7 +33,7 @@
 
 # keywords
 
-> **SfM** | **三维重建** | **graph-based** | **factor-graph** | **深度估计** | **feature keypoint** | **feature dectect** | **feature description** | **AR** | **feature descriptor** | **feature tracking** | **feature matching** | **outlier** | **bundle adjustment** | **localization** | **motion** | **non-rigid** | **distortion** | **parallel** | **camera model** | **fisheye** | **segmentation** | **fundamental matrix** | **factorization** | **optimization** | **mesh** | **stereo** | **RGB-D** | **dehazing** | **Multi-View Stereo** | **point cloud** | **surface** | **单目** | **多目** | **TSDF** | **dense map** | **semi-dense map** | **增大视野** | **visual odometry** | **visual-inertial odometry** | **LiDAR** | **3D结构光** | **直接法** | **特征点法** | **半直接法** | **DNN** |
+> **SfM** | **三维重建** | **graph-based** | **factor-graph** | **深度估计** | **feature keypoint** | **feature dectect** | **feature description** | **AR** | **feature descriptor** | **feature tracking** | **feature matching** | **outlier** | **bundle adjustment** | **localization** | **motion** | **non-rigid** | **distortion** | **parallel** | **camera model** | **fisheye** | **segmentation** | **fundamental matrix** | **factorization** | **optimization** | **mesh** | **stereo** | **RGB-D** | **dehazing** | **Multi-View Stereo** | **point cloud** | **surface** | **单目** | **多目** | **TSDF** | **dense map** | **semi-dense map** | **增大视野** | **visual odometry** | **visual-inertial odometry** | **LiDAR** | **3D结构光** | **直接法** | **特征点法** | **半直接法** | **DNN** | **uncertainty estimation** | **pose** | **GAN** |
 
 
 
@@ -418,7 +418,7 @@ KITTI
 
 ["Digging into self-supervised monocular depth estimation"]() 2019
 
-> 
+>  MonoDepth2
 > 
 > **深度估计** |
 
@@ -430,7 +430,7 @@ KITTI
 
 ["Deeper depth prediction with fully convolutional residual networks"]() 2016
 
-> 
+> 监督学习
 > 
 > **深度估计** |
 
@@ -444,7 +444,77 @@ KITTI
 
 > 
 > 
+> **深度估计** | **pose** |
+
+["Depth map prediction from a single image using a multi-scale deep network"]() 2014
+
+> 监督学习 CNN
+> 
+> **深度估计** | 
+
+["Depth and surface normal estimation from monocular images using regression on deep features and hierarchical CRFs"]() 2015
+
+> 监督学习
+> 
 > **深度估计** |
+
+["Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture"]() 2015
+
+> CNN
+> 
+> **深度估计** |
+
+["Depth from videos in the wild: Unsupervised monocular depth learning from unknown cameras"]() 2019
+
+>
+>
+> **深度估计** |
+
+["Unsupervised learning of depth and ego-motion from monocular video using 3d geometric constraints"]() 2018
+
+>
+>
+> **深度估计** |
+
+["Learning depth from monocular videos using direct methods"]() 2018
+
+>
+>
+> **深度估计** |
+
+["GeoNet: Unsupervised learning of dense depth, optical flow and camera pose"]() 2018
+
+>
+>
+> **深度估计** |
+
+["Unsupervised learning of monocular depth estimation and visual odometry with deep feature reconstruction"]() 2018
+
+>
+>
+> **深度估计** |
+
+["Spatial transformer networks"]() 2017
+
+> adopting differentiable interpolation
+>
+> **深度估计** |
+
+
+
+## uncertainty estimation
+
+["What uncertainties do we need in bayesian deep learning for computer vision?"]() 2017
+
+>
+>
+> **uncertainty estimation** |
+
+["Multi-task learning using uncertainty to weigh losses for scene geometry and semantics"]() 2018
+
+>
+>
+> **uncertainty estimation** |
 
 
 
@@ -731,6 +801,19 @@ mixed point、line correspondences、three views
 
 解决2views失败的重建
 
+["DeepVO: Towards end-to-end visual odometry with deep recurrent convolutional neural networks"]() 2017
+
+> supervised
+>
+> **visual odometry** | **DNN** | **pose** |
+
+["UnDeepVO: Monocular visual odometry through unsupervised deep learning"]() 2017
+
+> unsupervised
+>
+> **visual odometry** | **DNN** | **pose** |
+
+
 
 <a name="non-rigid"></a>
 ## non-rigid
@@ -930,6 +1013,12 @@ Many algorithms exist for structurally simple forests including coniferous fores
 <a name="stereo"></a>
 ## stereo
 
+["Multi-Frame GAN: Image Enhancement for Stereo Visual Odometry in Low Light"]() 2019 
+
+> 
+>
+> **stereo** | **GAN** |
+
 ["DPSNET: END-TO-END DEEP PLANE SWEEP STEREO"](https://openreview.net/pdf?id=ryeYHi0ctQ) 2019 ICLR
 
 > 对比 DeMoN、COLMAP、DeepMVS
@@ -947,7 +1036,7 @@ Many algorithms exist for structurally simple forests including coniferous fores
 
 > 将 SfM 看作学习问题
 > 
-> **stereo** | **SfM** |
+> **stereo** | **SfM** | **DNN** | **pose** |
 
 + image pairs -> CNN -> depth、camera motion
 + CNN： multiple stacked encoder-decoder
@@ -1215,7 +1304,7 @@ How can we incorporate such uncertainty-predictions into optimization-based VO?
 
 ["Deep Virtual Stereo Odometry: Leveraging Deep Depth Prediction for Monocular Direct Sparse Odometry"]() 2018
 
-> 
+> DVSO
 > 
 > **深度估计** | **visual odometry** | **stereo** |
 
@@ -1299,3 +1388,29 @@ How can we incorporate such uncertainty-predictions into optimization-based VO?
 >
 >
 > **DNN** | **visual odometry** |
+
+["GCNv2: Efficient correspondence prediction for real-time slam"]() 2019
+
+>
+>
+> **DNN** |
+
+
+
+## 
+
+["CodeSLAM-learning a compact, optimisable representation for dense visual SLAM"]() 2018
+
+>
+>
+> 
+
+
+
+## visual odometry
+
+["Self-improving visual odometry"]() 2018
+
+>
+>
+> **visual odometry** |

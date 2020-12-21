@@ -260,7 +260,7 @@
 
 > robust cost functions 非线性、且基于噪声和outliers的分布假设
 >
-> **SfM** | **三维重建** | **graph-based**
+> **SfM** | **三维重建** | **graph-based** |
 
 + view-graph cleaning network（noise、outliers）+ fine-tune network
 + 用合成graphs训练
@@ -272,7 +272,7 @@
 > 将大规模SfM问题，看作graph问题；
 > 特征匹配后，使用 cluster，并行体现在不同聚类可以同时 SfM
 > 
-> **SfM** | **三维重建** | **graph-based**
+> **SfM** | **三维重建** | **graph-based** |
 
 + 特征提取、匹配，filter outliers，images cluster
     
@@ -290,7 +290,7 @@
 
 > 对比 vocabulary trees 方法，如 BRIAD
 > 
-> **SfM** | **三维重建** | **graph-based**
+> **SfM** | **三维重建** | **graph-based** |
 
 + 使用 fisher distance
 + sample-and-propagate 机制
@@ -299,7 +299,7 @@
 
 > unordered images
 > 
-> **SfM** | **三维重建** | **graph-based**
+> **SfM** | **三维重建** | **graph-based** |
 
 + visual- similarity-based minimum spanning tree 最小生成树
 
@@ -313,7 +313,7 @@
 
 > factor graphs；非线性最小二乘优化问题
 > 
-> **factor-graph**
+> **factor-graph** |
 
 + an open-source C++/Python framework
 + a wide list of sparse linear solvers

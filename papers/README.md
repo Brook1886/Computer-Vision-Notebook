@@ -1,4 +1,3 @@
-
 # contents
 - [incremental SfM](#incremental_SfM)
 - [global SfM](#global_SfM)
@@ -27,9 +26,13 @@
 - [privacy](#privacy)
 - [tips](#tips)
 
+
+
 # keywords
 
-> **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** |
+> **SfM** | **三维重建** | **graph-based** | **factor-graph** |
+
+
 
 # papers
 
@@ -103,18 +106,25 @@
     
     images 和 points 分为 2 个 set：affected 和 unaffected
     
+### ["Towards Linear-time Incremental Structure from Motion"](http://ccwu.me/vsfm/vsfm.pdf) 2013 3DV
 
-#### ["Towards Linear-time Incremental Structure from Motion"](http://ccwu.me/vsfm/vsfm.pdf) 2013 3DV
+> 增量式
+>
+> **SfM** | **三维重建** |
 
 + preemptive feature matching
 + preconditioned conjugate gradient
 + reduce scene graph
 
-<a name="global"></a>
-### global
-#### ["Global Structure-from-Motion by Similarity Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Cui_Global_Structure-From-Motion_by_ICCV_2015_paper.pdf) 2015 ICCV
 
-已知：images，由5点算法计算的E，EG graph；求：朝向R和相机中心c
+<a name="global_SfM"></a>
+## global SfM
+
+### ["Global Structure-from-Motion by Similarity Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Cui_Global_Structure-From-Motion_by_ICCV_2015_paper.pdf) 2015 ICCV
+
+> 已知：images，由5点算法计算的E，EG graph；求：朝向R和相机中心c
+>
+> **SfM** | **三维重建** |
 
 ![globalSfM](https://github.com/Brook1886/SfM-Notebook/blob/main/image/2015%20Global%20Structure-from-Motion%20by%20Similarity%20Averaging.png)
 
@@ -138,14 +148,21 @@
 
 + final BA：camera、3D points
     
-#### ["Robust Camera Location Estimation by Convex Programming"](https://web.math.princeton.edu/~amits/publications/CVPR2015-SfM-Published.pdf) 2015 IEEE
+### ["Robust Camera Location Estimation by Convex Programming"](https://web.math.princeton.edu/~amits/publications/CVPR2015-SfM-Published.pdf) 2015 IEEE
+
+> Location Estimation
+>
+> **SfM** | **三维重建** |
 
 + 估计 camera location 和 orientation
 
 + LUD least unsquared deviations
 
+### ["Robust Global Translations with 1DSfM"](http://www.cs.cornell.edu/projects/1dsfm/docs/1DSfM_ECCV14.pdf) 2014 ECCV
 
-#### ["Robust Global Translations with 1DSfM"](http://www.cs.cornell.edu/projects/1dsfm/docs/1DSfM_ECCV14.pdf) 2014 ECCV
+> 1DSfM
+>
+> **SfM** | **三维重建** |
 
 + 使用 L1-IELS 算法，根据 relative rotation 估计 global rotation
 
@@ -160,9 +177,12 @@
 + slove global translation
 
     设置目标函数，使用弦距离（chordal distance）
+   
+### ["Efficient and Robust Large-Scale Rotation Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.pdf) 2013 ICCV
 
-    
-#### ["Efficient and Robust Large-Scale Rotation Averaging"](https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.pdf) 2013 ICCV
+> Rotation Averaging
+>
+> **SfM** | **三维重建** |
 
 + Lie-Algebraic Relative Rotation Averaging 算法
 
@@ -172,22 +192,25 @@
 
 + L1-IRLS 算法
 
-<a name="hierarchical"></a>
-### hierarchical
 
-#### ["Hierarchical structure-and-motion recovery from uncalibrated images"](https://arxiv.org/pdf/1506.00395) 2015 Jun
+<a name="hierarchical_SfM"></a>
+## hierarchical SfM
 
-dubbed SAMANTHA
+### ["Hierarchical structure-and-motion recovery from uncalibrated images"](https://arxiv.org/pdf/1506.00395) 2015 Jun
 
-<a name="multi-stage"></a>
-### multi-stage
-#### ["HSfM: Hybrid Structure-from-Motion"](https://openaccess.thecvf.com/content_cvpr_2017/papers/Cui_HSfM_Hybrid_Structure-from-Motion_CVPR_2017_paper.pdf) 2017 ICCV
+> dubbed SAMANTHA
+>
+> **SfM** | **三维重建** |
 
-> incremental 鲁棒、精度高，但是效率较低
 
-> global 对outliers敏感
+<a name="multi-stage_SfM"></a>
+## multi-stage SfM
 
-> accuracy + robustness + efficiency 都拿？
+### ["HSfM: Hybrid Structure-from-Motion"](https://openaccess.thecvf.com/content_cvpr_2017/papers/Cui_HSfM_Hybrid_Structure-from-Motion_CVPR_2017_paper.pdf) 2017 ICCV
+
+> incremental 鲁棒、精度高，但是效率较低；global 对outliers敏感；accuracy + robustness + efficiency 都要？
+>
+> **SfM** | **三维重建** |
 
 ![pipeline](https://github.com/Brook1886/SfM-Notebook/blob/main/image/2017%20HSfM%20Hybrid%20Structure-from-Motion.png)
 
@@ -228,24 +251,28 @@ dubbed SAMANTHA
         每轮迭代，随机选两个views，如果angle between two projection rays 小于3度，直接用DLT；检查 cheirality；重投影误差小，接受
         
 + 其他技巧：Huber function；Re-Triangulation + BA
-        
-<a name="graph-based"></a>
-### graph-based
 
-#### ["NeuRoRA: Neural Robust Rotation Averaging"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123690137.pdf) 2020 ECCV 
+
+<a name="graph-based"></a>
+## graph-based
+
+### ["NeuRoRA: Neural Robust Rotation Averaging"](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123690137.pdf) 2020 ECCV 
 
 > robust cost functions 非线性、且基于噪声和outliers的分布假设
+>
+> **SfM** | **三维重建** | **graph-based**
 
 + view-graph cleaning network（noise、outliers）+ fine-tune network
 + 用合成graphs训练
 
 1. graph-based network可以用于其他graph-based geometric problems，像pose-graph optimization
 
-#### ["Graph-Based Parallel Large Scale Structure from Motion"](https://arxiv.org/pdf/1912.10659v2.pdf) 2019 Dec
+### ["Graph-Based Parallel Large Scale Structure from Motion"](https://arxiv.org/pdf/1912.10659v2.pdf) 2019 Dec
 
-将大规模SfM问题，看作graph问题
-
-特征匹配后，使用 cluster，并行体现在不同聚类可以同时 SfM
+> 将大规模SfM问题，看作graph问题；
+> 特征匹配后，使用 cluster，并行体现在不同聚类可以同时 SfM
+> 
+> **SfM** | **三维重建** | **graph-based**
 
 + 特征提取、匹配，filter outliers，images cluster
     
@@ -259,35 +286,43 @@ dubbed SAMANTHA
 
 + 最小高度树找到合适的anchor node，减少误差累计
 
-#### ["GraphMatch: Efficient Large-Scale Graph Construction for Structure from Motion"](https://arxiv.org/pdf/1710.01602) 2017 Oct
+### ["GraphMatch: Efficient Large-Scale Graph Construction for Structure from Motion"](https://arxiv.org/pdf/1710.01602) 2017 Oct
 
-对比 vocabulary trees 方法，如 BRIAD
+> 对比 vocabulary trees 方法，如 BRIAD
+> 
+> **SfM** | **三维重建** | **graph-based**
 
 + 使用 fisher distance
 + sample-and-propagate 机制
 
-#### ["Graph-Based Consistent Matching for Structure-from-Motion"](http://www.eccv2016.org/files/posters/P-2A-19.pdf) 2016 ECCV
+### ["Graph-Based Consistent Matching for Structure-from-Motion"](http://www.eccv2016.org/files/posters/P-2A-19.pdf) 2016 ECCV
 
-unordered images
+> unordered images
+> 
+> **SfM** | **三维重建** | **graph-based**
 
 + visual- similarity-based minimum spanning tree 最小生成树
 
 + global community-based graph 算法
 
+
 <a name="factor-graph"></a>
-### factor graph
-#### ["miniSAM: A Flexible Factor Graph Non-linear Least Squares Optimization Framework"](https://arxiv.org/pdf/1909.00903v1.pdf) 2019 Sep
+## factor graph
 
-factor graphs
+### ["miniSAM: A Flexible Factor Graph Non-linear Least Squares Optimization Framework"](https://arxiv.org/pdf/1909.00903v1.pdf) 2019 Sep
 
-非线性最小二乘优化问题
+> factor graphs；非线性最小二乘优化问题
+> 
+> **factor-graph**
 
 + an open-source C++/Python framework
 + a wide list of sparse linear solvers
 
+
 <a name="depth"></a>
-### depth
-#### ["SeasonDepth: Cross-Season Monocular Depth Prediction Dataset and Benchmark under Multiple Environments"](https://arxiv.org/pdf/2011.04408v1.pdf) 2020 Nov
+## depth
+
+### ["SeasonDepth: Cross-Season Monocular Depth Prediction Dataset and Benchmark under Multiple Environments"](https://arxiv.org/pdf/2011.04408v1.pdf) 2020 Nov
 
 季节、光照变换，缺乏数据集和基准
 

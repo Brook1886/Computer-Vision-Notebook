@@ -32,7 +32,7 @@
 <a name="incremental"></a>
 ### incremental
 
-["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
+### ["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
 
 > 描述：
 >

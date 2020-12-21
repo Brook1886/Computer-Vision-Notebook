@@ -19,4 +19,4 @@
   - SLAM
     - [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
     - [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2)
-    
+    - [DSO: Direct Sparse Odometry](https://github.com/JakobEngel/dso)

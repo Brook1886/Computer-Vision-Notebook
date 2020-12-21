@@ -39,7 +39,7 @@
 > **SfM** | **三维重建**
 
 + scene graph augmentation
-    + 估计基本矩阵F，当inliers >= NF, image pair 几何匹配
+    + 估计基本矩阵F，当$inliers >= N_F$, image pair 几何匹配
     + 根据决定H的inliers数目NH划分H
         
         GRIC法
@@ -67,7 +67,7 @@
     
     充分地评估会比较耗时、所以近似评估
     
-    数目越多、分布越均匀 -> score越高
+    数目越多、分布越均匀 -> score 越高
     
     按固定大小网格离散化图片，统计score
     

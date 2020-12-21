@@ -3,9 +3,17 @@
 关于SLAM、SfM、MVS的学习记录
 
 - [papers](./papers)
-- [notes](./notes)
+- notes
   - [SLAM introduction](./notes/SLAM_introduction.md)
-- **research team**
+- research team
   - [慕尼黑工业大学 TUM](https://vision.in.tum.de/research/vslam)
 - open source
-  - 
+  - SfM
+    - [OpenMVG](https://github.com/openMVG/openMVG)
+    - [Colmap](https://github.com/colmap/colmap)
+  - MVS
+    - [OpenMVS](https://github.com/cdcseacave/openMVS)
+  - SLAM
+    - [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
+    - [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2)
+    

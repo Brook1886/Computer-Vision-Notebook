@@ -29,194 +29,14 @@
 
 # papers
 
-<a name="point-cloud"></a>
-### point cloud
-
-#### ["TAPA-MVS: Textureless-Aware PAtchMatch Multi-View Stereo"](https://openaccess.thecvf.com/content_ICCV_2019/papers/Romanoni_TAPA-MVS_Textureless-Aware_PAtchMatch_Multi-View_Stereo_ICCV_2019_paper.pdf) 2019 ICCV
-
-估计每个 view 的 depth map、normal map（法线图）
-
-通过基于 patch match 的优化
-
-> photo-consistency 光度一致性，重建模型缺乏完整性、使其不可靠
-
-+ 假设无纹理区域是分段平面
-
-+ 数据集：ETH3D
-
-MVS 关键是 depth map 估计
-
-depth map：1）fuse into point cloud；2）volumetric 表达（voxel grid、Delaunay triangulation 德劳内三角）
-
-+ Delaunay 三角化，没有点在三角形外接圆内，避免了“极瘦”的三角形
-
-    连接圆心 -> Voronoi图（沃罗诺伊图）
-    
-    解凸包问题 convex hull
-    
-    z = x^2 + y^2，2d平面转三维，找3个点的下凸包，下凸包是2d平面的一个外接圆
-    
-+ patch match 性能较强
-
-    随机某个点的 patch，再估计领域点
-
-<a name="surface"></a>
-### surface
-
-#### ["Scalable Surface Reconstruction from Point Clouds with Extreme Scale and Density Diversity"](https://openaccess.thecvf.com/content_cvpr_2017/papers/Mostegel_Scalable_Surface_Reconstruction_CVPR_2017_paper.pdf) 2017 CVPR
-
-+ a combiantion of: 1) octree data partitioning + 2) delaunay tetrahedralization + 3) graph cut
-
-> 现有的 mulit-scale surface reconstruction focus on：1）局部尺度变化；2）获取封闭网络，基于全局
-
-
-
-
-
-## 增大视野
-
-["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) 2020 ICRA
-
-> 描述：利用鱼眼相机实现全方向的SLAM。轻量DNN做各个方向的深度估计，整合深度估计到VO，利用深度估计结果做重投影优化
->
-> 关键字：**fisheye**，**多目**，**TSDF**，**depth estimation network**，**dense map**
-
-["Sweepnet: Wide-baseline omnidirectional depth estimation"]() 2019 ICRA
-
-> 描述：增加fov
->
-> 关键字：**fisheye**，
-
-["Rovo: Robust omnidirectional visual odometry for wide-baseline wide-fov camera systems"]() 2019 ICRA
-
-> 描述：增加fov
->
-> 关键字：**fisheye**，
-
-["Omnimvs: End-to-end learning for omnidirectional stereo matching"]() 2019
-
-> 描述：增加fov
->
-> 关键字：**fisheye**，**MVS**
-
-
-## LiDAR 
-
-["Tightly coupled 3d lidar inertial odometry and mapping"]() 2019 ICRA
-
-> 描述：
->
-> 关键字：**LiDAR**，
-
-
-## 结构光
-
-["Kinectfusion: Real-time dense surface mapping and tracking"]() 2011 ISMAR
-
-> 描述：
->
-> 关键字：**3D结构光**，
-
-
-## 稠密建图
-
-["Efficient large-scale stereo matching"]() 2010 ACCV
-
-> 描述：
->
-> 关键字：**dense map**，
-
-["Stereoscan: Dense 3d reconstruction in real-time"]() 2011 IEEE
-
-> 描述：
->
-> 关键字：**dense map**，
-
-
-## 深度估计
-
-["Ga-net: Guided aggregation net for end-to-end stereo matching"]() 2019 CVPR
-
-> 描述：
->
-> 关键字：**depth estimation network**，
-
-["Pyramid stereo matching network"]() 2018 CVPR
-
-> 描述：
->
-> 关键字：**depth estimation network**，
-
-["Occlusions, motion and depth boundaries with a generic network for disparity, optical flow or scene flow estimation"]() 2018 ECCV
-
-> 描述：
->
-> 关键字：**depth estimation network**，
-
-## 特征提取
-
-["Orb: An efficient alternative to sift or surf"]() 2011 ICCV
-
-> 描述：
->
-> 关键字：**feature descriptor**，
-
----
-
-**特征点orb**
-
-["ORB-SLAM: a versatile and accurate monocular slam system"]() 2015 IEEE
-
-> 描述：   
->
-> 关键字：**单目**
-
-["ORB-SLAM2: an Open-Source SLAM System forMonocular, Stereo and RGB-D Cameras"](https://arxiv.org/pdf/1610.06475.pdf) 2016 Oct
-
-> 描述：a complete SLAM system for monocular, stereo and RGB-D cameras, including map reuse,loop closing and relocalization capabilities
->
-> 关键字：**单目**
-
-parallel threads:
-
-1) tracking; 2) local mapping; 3) loop closing; 4) full BA
-
-+ place recongition -> relocalization，用于 tracking 失败、在已经 map 的场景中重新初始化、loop 检测
-
-+ 维护一个co-visibiliy graph（两个关键帧观察到相同的点）和一个最小生成树（连接所有关键帧）
-
-+ close points -> translation; far points -> orientation
-
-["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
-
-> 描述：
->
-> 关键字：**单目**
-
-![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)
-
-
-
-**直接法**
-
-["Semi-Dense Visual Odometry for a Monocular Camera"](https://openaccess.thecvf.com/content_iccv_2013/papers/Engel_Semi-dense_Visual_Odometry_2013_ICCV_paper.pdf) 2013 ICCV
-
-> 描述：
->
-> 关键字：
-
-["LSD-SLAM: Large-Scale Direct Monocular SLAM"](https://jakobengel.github.io/pdf/engel14eccv.pdf) 2014 ECCV
-
-> 描述：
->
-> 关键字：
-
----
-
-
 <a name="incremental"></a>
 ### incremental
-#### ["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
+
+["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
+
+> 描述：
+>
+> 关键字：**单目**
 
 + scene graph augmentation
     + 估计基本矩阵F，当inliers >= NF, image pair 几何匹配
@@ -982,3 +802,187 @@ LineSfM
 + use trifocal info for line and/or point features
 + parameterless RANSAC-like approach -> robust
 
+
+<a name="point-cloud"></a>
+### point cloud
+
+#### ["TAPA-MVS: Textureless-Aware PAtchMatch Multi-View Stereo"](https://openaccess.thecvf.com/content_ICCV_2019/papers/Romanoni_TAPA-MVS_Textureless-Aware_PAtchMatch_Multi-View_Stereo_ICCV_2019_paper.pdf) 2019 ICCV
+
+估计每个 view 的 depth map、normal map（法线图）
+
+通过基于 patch match 的优化
+
+> photo-consistency 光度一致性，重建模型缺乏完整性、使其不可靠
+
++ 假设无纹理区域是分段平面
+
++ 数据集：ETH3D
+
+MVS 关键是 depth map 估计
+
+depth map：1）fuse into point cloud；2）volumetric 表达（voxel grid、Delaunay triangulation 德劳内三角）
+
++ Delaunay 三角化，没有点在三角形外接圆内，避免了“极瘦”的三角形
+
+    连接圆心 -> Voronoi图（沃罗诺伊图）
+    
+    解凸包问题 convex hull
+    
+    z = x^2 + y^2，2d平面转三维，找3个点的下凸包，下凸包是2d平面的一个外接圆
+    
++ patch match 性能较强
+
+    随机某个点的 patch，再估计领域点
+
+<a name="surface"></a>
+### surface
+
+#### ["Scalable Surface Reconstruction from Point Clouds with Extreme Scale and Density Diversity"](https://openaccess.thecvf.com/content_cvpr_2017/papers/Mostegel_Scalable_Surface_Reconstruction_CVPR_2017_paper.pdf) 2017 CVPR
+
++ a combiantion of: 1) octree data partitioning + 2) delaunay tetrahedralization + 3) graph cut
+
+> 现有的 mulit-scale surface reconstruction focus on：1）局部尺度变化；2）获取封闭网络，基于全局
+
+
+
+
+
+## 增大视野
+
+["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) 2020 ICRA
+
+> 描述：利用鱼眼相机实现全方向的SLAM。轻量DNN做各个方向的深度估计，整合深度估计到VO，利用深度估计结果做重投影优化
+>
+> 关键字：**fisheye**，**多目**，**TSDF**，**depth estimation network**，**dense map**
+
+["Sweepnet: Wide-baseline omnidirectional depth estimation"]() 2019 ICRA
+
+> 描述：增加fov
+>
+> 关键字：**fisheye**，
+
+["Rovo: Robust omnidirectional visual odometry for wide-baseline wide-fov camera systems"]() 2019 ICRA
+
+> 描述：增加fov
+>
+> 关键字：**fisheye**，
+
+["Omnimvs: End-to-end learning for omnidirectional stereo matching"]() 2019
+
+> 描述：增加fov
+>
+> 关键字：**fisheye**，**MVS**
+
+
+## LiDAR 
+
+["Tightly coupled 3d lidar inertial odometry and mapping"]() 2019 ICRA
+
+> 描述：
+>
+> 关键字：**LiDAR**，
+
+
+## 结构光
+
+["Kinectfusion: Real-time dense surface mapping and tracking"]() 2011 ISMAR
+
+> 描述：
+>
+> 关键字：**3D结构光**，
+
+
+## 稠密建图
+
+["Efficient large-scale stereo matching"]() 2010 ACCV
+
+> 描述：
+>
+> 关键字：**dense map**，
+
+["Stereoscan: Dense 3d reconstruction in real-time"]() 2011 IEEE
+
+> 描述：
+>
+> 关键字：**dense map**，
+
+
+## 深度估计
+
+["Ga-net: Guided aggregation net for end-to-end stereo matching"]() 2019 CVPR
+
+> 描述：
+>
+> 关键字：**depth estimation network**，
+
+["Pyramid stereo matching network"]() 2018 CVPR
+
+> 描述：
+>
+> 关键字：**depth estimation network**，
+
+["Occlusions, motion and depth boundaries with a generic network for disparity, optical flow or scene flow estimation"]() 2018 ECCV
+
+> 描述：
+>
+> 关键字：**depth estimation network**，
+
+## 特征提取
+
+["Orb: An efficient alternative to sift or surf"]() 2011 ICCV
+
+> 描述：
+>
+> 关键字：**feature descriptor**，
+
+---
+
+**特征点orb**
+
+["ORB-SLAM: a versatile and accurate monocular slam system"]() 2015 IEEE
+
+> 描述：   
+>
+> 关键字：**单目**
+
+["ORB-SLAM2: an Open-Source SLAM System forMonocular, Stereo and RGB-D Cameras"](https://arxiv.org/pdf/1610.06475.pdf) 2016 Oct
+
+> 描述：a complete SLAM system for monocular, stereo and RGB-D cameras, including map reuse,loop closing and relocalization capabilities
+>
+> 关键字：**单目**
+
+parallel threads:
+
+1) tracking; 2) local mapping; 3) loop closing; 4) full BA
+
++ place recongition -> relocalization，用于 tracking 失败、在已经 map 的场景中重新初始化、loop 检测
+
++ 维护一个co-visibiliy graph（两个关键帧观察到相同的点）和一个最小生成树（连接所有关键帧）
+
++ close points -> translation; far points -> orientation
+
+["ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM"](https://arxiv.org/pdf/2007.11898.pdf) 2020 Jul
+
+> 描述：
+>
+> 关键字：**单目**
+
+![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)
+
+
+
+**直接法**
+
+["Semi-Dense Visual Odometry for a Monocular Camera"](https://openaccess.thecvf.com/content_iccv_2013/papers/Engel_Semi-dense_Visual_Odometry_2013_ICCV_paper.pdf) 2013 ICCV
+
+> 描述：
+>
+> 关键字：
+
+["LSD-SLAM: Large-Scale Direct Monocular SLAM"](https://jakobengel.github.io/pdf/engel14eccv.pdf) 2014 ECCV
+
+> 描述：
+>
+> 关键字：
+
+---

@@ -1,7 +1,7 @@
 # contents
 - [incremental SfM](#incremental_SfM)
 - [global SfM](#global_SfM)
-- [hierarchica SfMl](#hierarchical_SfM)
+- [hierarchica SfM](#hierarchical_SfM)
 - [multi-stage SfM](#multi-stage_SfM)
 - [graph-based](#graph-based)
 - [factor graph](#factor-graph)

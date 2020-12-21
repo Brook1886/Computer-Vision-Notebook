@@ -4,3 +4,4 @@
 
 - [papers](./papers)
 - [notes](./notes)
+  - [SLAM introduction](./notes/SLAM_introduction.md)

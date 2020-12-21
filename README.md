@@ -5,6 +5,7 @@
 - [papers](./papers)
 - notes
   - [SLAM introduction](./notes/SLAM_introduction.md)
+- blog
   - [DSO: Direct Sparse Odometry](https://vision.in.tum.de/research/vslam/dso?redirect=1)
 - research team
   - [慕尼黑工业大学 TUM](https://vision.in.tum.de/research/vslam)

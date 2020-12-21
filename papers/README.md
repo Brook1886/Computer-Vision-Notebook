@@ -29,7 +29,7 @@
 
 # keywords
 
-> | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM**
+> **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** | **SfM** |
 
 # papers
 
@@ -40,7 +40,7 @@
 
 > 增量式SfM用于三维重建
 >
-> **SfM** | **三维重建**
+> **SfM** | **三维重建** |
 
 + scene graph augmentation
     + 估计基本矩阵F，当$inliers >= N_F$, image pair 几何匹配

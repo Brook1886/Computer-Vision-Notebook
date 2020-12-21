@@ -40,7 +40,7 @@
 # papers
 
 <a name="incremental_SfM"></a>
-## [incremental SfM](#contents)
+## incremental SfM [\[back\]](#contents)
 
 ### ["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
 

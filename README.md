@@ -1,7 +1,6 @@
 # Notebook
 
-关于SLAM、SfM、MVS的学习记录，持续更新
+关于vSLAM、SfM、MVS的学习记录
 
-- [SLAM](./SLAM)
-- [SfM](./SfM)
-- [MVS](./MVS)
+- [paper](./paper)
+- [note](./note)

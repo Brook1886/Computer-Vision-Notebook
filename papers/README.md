@@ -1,9 +1,9 @@
 
 # contents
-- [incremental](#incremental)
-- [global](#global)
-- [hierarchical](#hierarchical)
-- [multi-stage](#multi-stage)
+- [incremental SfM](#incremental_SfM)
+- [global SfM](#global_SfM)
+- [hierarchica SfMl](#hierarchical_SfM)
+- [multi-stage SfM](#multi-stage_SfM)
 - [graph-based](#graph-based)
 - [factor graph](#factor-graph)
 - [depth](#depth)
@@ -29,8 +29,8 @@
 
 # papers
 
-<a name="incremental"></a>
-## incremental
+<a name="incremental_SfM"></a>
+## incremental SfM
 
 ### ["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
 
@@ -44,13 +44,13 @@
         
         GRIC法
         
-        如果 N_H / N_F < \epsilon_{HF}, camera 在同一个场景移动
+        如果 $N_H / N_F < \epsilon_{HF}$, camera 在同一个场景移动
         
     + 对于标定好的相机
     
-        E 本质矩阵，N_E / N_F > \epsilon_{EF}, 说明标定正确
+        E 本质矩阵，$N_E / N_F > \epsilon_{EF}$, 说明标定正确
         
-        分解E、三角测量、median triangulation angle \alpha_m, 可区分pure rotation、planar scenes
+        分解E、三角测量、median triangulation angle $\alpha_m$, 可区分pure rotation、planar scenes
         
     + 辨别 WTF（watermarks、timestamps frames）不加入 scene graph
     + valid pairs

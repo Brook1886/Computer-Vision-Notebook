@@ -30,7 +30,7 @@
 
 # keywords
 
-> **SfM** | **三维重建** | **graph-based** | **factor-graph** |
+> **SfM** | **三维重建** | **graph-based** | **factor-graph** | **深度估计** | **feature keypoint** | **feature dectect** | **feature description** | **AR** | **feature description** | **feature tracking** | **feature matching** | **outlier** | **bundle adjustment** | **localization** | **motion** | **non-rigid** | **distortion** | **parallel** | **camera model** | **segmentation** | **fundamental matrix** | **factorization** | **optimization** | **mesh** | **stereo** | **dehazing** | **Multi-View Stereo** | **point cloud** | **surface** |
 
 
 

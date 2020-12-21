@@ -30,7 +30,7 @@
 # papers
 
 <a name="incremental"></a>
-### incremental
+## incremental
 
 ### ["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
 

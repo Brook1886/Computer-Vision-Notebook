@@ -191,6 +191,8 @@
 
 ---
 
+
+
 ["Tightly coupled 3d lidar inertial odometry and mapping"]() 2019 ICRA
 
 > 描述：
@@ -239,7 +241,11 @@
 >
 > 关键字：**feature descriptor**，
 
-["Orb-slam: a versatile and accurate monocular slam system"]() 2015 IEEE
+---
+
+**特征点orb**
+
+["ORB-SLAM: a versatile and accurate monocular slam system"]() 2015 IEEE
 
 > 描述：
 >
@@ -268,3 +274,24 @@ parallel threads:
 > 关键字：**单目**
 
 ![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)
+
+---
+
+
+---
+
+**直接法**
+
+["Semi-Dense Visual Odometry for a Monocular Camera"](https://openaccess.thecvf.com/content_iccv_2013/papers/Engel_Semi-dense_Visual_Odometry_2013_ICCV_paper.pdf) 2013 ICCV
+
+> 描述：
+>
+> 关键字：
+
+["LSD-SLAM: Large-Scale Direct Monocular SLAM"](https://jakobengel.github.io/pdf/engel14eccv.pdf) 2014 ECCV
+
+> 描述：
+>
+> 关键字：
+
+---

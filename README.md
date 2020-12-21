@@ -1,6 +1,6 @@
 # Notebook
 
-关于SLAM、SfM、MVS的学习记录
+关于SLAM、SfM、MVS...的学习记录
 
 - [papers](./papers)
 - notes

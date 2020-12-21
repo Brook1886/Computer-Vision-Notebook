@@ -1190,7 +1190,7 @@ parallel threads:
 > **直接法** |
 
 
-## 直接法
+## 直接法 DSO
 
 ["Omnidirectional DSO: Direct Sparse Odometry with Fisheye Cameras"]() 2018
 
@@ -1238,6 +1238,9 @@ How can we incorporate such uncertainty-predictions into optimization-based VO?
 ["Direct Sparse Odometry"]() 2016
 
 ["A Photometrically Calibrated Benchmark For Monocular Visual Odometry"]() 2016
+
+
+## 直接法 RGB-D
 
 ["Dense visual SLAM for RGB-D cameras"]() 2013
 

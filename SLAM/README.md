@@ -9,7 +9,7 @@
 <a name="research_team"></a>
 # research team
 
-慕尼黑工业大学 TUM <https://vision.in.tum.de/research/vslam>
++ 慕尼黑工业大学 TUM <https://vision.in.tum.de/research/vslam>
 
 <a name="note"></a>
 # note
@@ -164,12 +164,12 @@
     
     直接法和特征法结合、IMU、动态场景、语义、长期SLAM、多机器人
 
+
 <a name="papers"></a>
 # papers
 
----
 
-**增大视野**
+## 增大视野
 
 ["OmniSLAM: Omnidirectional Localization and Dense Mapping for Wide-baseline Multi-camera Systems"](https://arxiv.org/pdf/2003.08056v1.pdf) 2020 ICRA
 
@@ -195,9 +195,8 @@
 >
 > 关键字：**fisheye**，**MVS**
 
----
 
-
+## LiDAR 
 
 ["Tightly coupled 3d lidar inertial odometry and mapping"]() 2019 ICRA
 
@@ -205,11 +204,17 @@
 >
 > 关键字：**LiDAR**，
 
+
+## 结构光
+
 ["Kinectfusion: Real-time dense surface mapping and tracking"]() 2011 ISMAR
 
 > 描述：
 >
 > 关键字：**3D结构光**，
+
+
+## 稠密建图
 
 ["Efficient large-scale stereo matching"]() 2010 ACCV
 
@@ -222,6 +227,9 @@
 > 描述：
 >
 > 关键字：**dense map**，
+
+
+## 深度估计
 
 ["Ga-net: Guided aggregation net for end-to-end stereo matching"]() 2019 CVPR
 
@@ -241,6 +249,8 @@
 >
 > 关键字：**depth estimation network**，
 
+## 特征提取
+
 ["Orb: An efficient alternative to sift or surf"]() 2011 ICCV
 
 > 描述：
@@ -253,7 +263,7 @@
 
 ["ORB-SLAM: a versatile and accurate monocular slam system"]() 2015 IEEE
 
-> 描述：
+> 描述：   
 >
 > 关键字：**单目**
 
@@ -281,10 +291,7 @@ parallel threads:
 
 ![Main system components of ORB-SLAM3](https://github.com/Brook1886/SfM-Notebook/blob/main/image/Main%20system%20components%20of%20ORB-SLAM3.png)
 
----
 
-
----
 
 **直接法**
 

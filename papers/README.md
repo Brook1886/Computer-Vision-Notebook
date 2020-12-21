@@ -1,6 +1,6 @@
 
 # contents
-- [incremental ](#incremental)
+- [incremental](#incremental)
 - [global](#global)
 - [hierarchical](#hierarchical)
 - [multi-stage](#multi-stage)
@@ -36,7 +36,9 @@
 
 > 描述：
 >
-> 关键字：**单目**
+> 关键字：**单目**，**三维重建**
+>
+> **单目** | **三维重建**
 
 + scene graph augmentation
     + 估计基本矩阵F，当inliers >= NF, image pair 几何匹配

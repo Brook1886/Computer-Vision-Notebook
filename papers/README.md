@@ -416,7 +416,7 @@ KITTI and Make3D 数据集
 
 KITTI
 
-["Digging into self-supervised monocular depth estimation"]() 2019
+["Digging into self-supervised monocular depth estimation"](https://arxiv.org/pdf/1806.01260.pdf) 2019
 
 >  MonoDepth2
 > 
@@ -440,7 +440,7 @@ KITTI
 > 
 > **深度估计** |
 
-["Unsupervised learning of depth and ego-motion from video"]() 2017
+["Unsupervised learning of depth and ego-motion from video"](https://people.eecs.berkeley.edu/~tinghuiz/projects/SfMLearner/cvpr17_sfm_final.pdf) 2017
 
 > 
 > 
@@ -1298,6 +1298,28 @@ How can we incorporate such uncertainty-predictions into optimization-based VO?
 
 + 预测 brightness transformation parameters
 
++ DepthNet
+
+    形式：encoder+decoder，encoder采用resnet18，decoder参考["Digging into self-supervised monocular
+    depth estimation"](https://arxiv.org/pdf/1806.01260.pdf)
+
+    输入：512\*256图片
+
+    输出：3个channels，$D_t, D_t^s, \Sigma_t$
+
+    训练过程：
+
+    1. 初始化：encoder是resnet18(from PyTorch的torchvision)，采用ImageNet预训练；decoder随机
+    2. 超参：batch为8，Adam优化器，epochs20\~40，学习率$10^{-4}$，最后5epochs降至$10^{-5}$
+
++ PoseNet
+
+    形式：参考["Unsupervised learning of depth and ego-motion from video"](https://people.eecs.berkeley.edu/~tinghuiz/projects/SfMLearner/cvpr17_sfm_final.pdf)
+
++ brightness parameters
+
+
+
 ["Rolling-Shutter Modelling for Visual-Inertial Odometry"]() 2019
 
 ["Direct Sparse Odometry With Rolling Shutter"]() 2018
@@ -1312,19 +1334,24 @@ How can we incorporate such uncertainty-predictions into optimization-based VO?
 
 ["LDSO: Direct Sparse Odometry with Loop Closure"]() 2018
 
-["Direct Sparse Visual-Inertial Odometry using Dynamic Marginalization"]() 2018
+### ["Direct Sparse Visual-Inertial Odometry using Dynamic Marginalization"](https://arxiv.org/pdf/1804.05625.pdf) 2018
 
 >
 >
 > **visual-inertial odometry** |
 
-["Stereo DSO: Large-Scale Direct Sparse Visual Odometry with Stereo Cameras"]() 2017
+### ["Stereo DSO: Large-Scale Direct Sparse Visual Odometry with Stereo Cameras"]() 2017
 
 > 
 > 
 > **stereo** |
 
-["Direct Sparse Odometry"]() 2016
+["Direct Sparse Odometry"](https://arxiv.org/pdf/1607.02565.pdf) 2016
+
+>
+>
+> **直接法** |
+
 
 ["A Photometrically Calibrated Benchmark For Monocular Visual Odometry"]() 2016
 

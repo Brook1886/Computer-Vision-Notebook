@@ -28,6 +28,7 @@
 - [tips](#tips)
 - [Multi-View Stereo](#Multi-View_Stereo)
 - [SLAM](#SLAM)
+- [robot grasp](#robot_grasp)
 
 
 
@@ -1441,3 +1442,18 @@ How can we incorporate such uncertainty-predictions into optimization-based VO?
 >
 >
 > **visual odometry** |
+
+
+<a name="robot_grasp"></a>
+## robot grasp
+
+[Dex-Net 2.0]() 2017
+
+建立数据库（数据驱动）
+
+如何获取大量的三维模型？
+- 合成数据库：3DNet、ShapeNet
+- 真实物体扫描：YCB
+
+机械臂模拟器：V-rep、Sapien、Mujoco、Gazebo
+

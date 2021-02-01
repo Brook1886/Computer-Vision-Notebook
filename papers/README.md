@@ -501,7 +501,11 @@ KITTI
 >
 > **深度估计** |
 
+["Neural RGB→D Sensing: Depth and Uncertainty from a Video Camera"](https://arxiv.org/abs/1901.02571) 2019
 
+> **深度估计** |
+
+训练三个CNN，输入视频流中的相邻5帧，输出depth及其对应的置信度
 
 ## uncertainty estimation
 

@@ -1,7 +1,5 @@
 # Computer-Vision-Notebook
 
-计算机视觉相关笔记
-
 - [papers](./papers)
 - notes
   - [SLAM introduction](./notes/SLAM_introduction.md)

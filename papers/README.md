@@ -1,3 +1,7 @@
+["Bundle Adjustment – A Modern Synthesis"](https://hal.inria.fr/inria-00548290/file/Triggs-va99.pdf), Bill Triggs, 2000
+
+["Bundle Adjustment Revisited"](https://arxiv.org/pdf/1912.03858.pdf), Yu Chen, 2019
+
 [LSM: Learning Subspace Minimization for Low-level Vision](https://arxiv.org/abs/2004.09197) 2020
 
 [Deep Slow Motion Video Reconstruction with Hybrid Imaging System](https://arxiv.org/abs/2002.12106) 2020

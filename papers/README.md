@@ -1,9 +1,9 @@
-<a name="contents"></a>
 # contents
-- [incremental SfM](#incremental_SfM)
-- [global SfM](#global_SfM)
-- [hierarchica SfM](#hierarchical_SfM)
-- [multi-stage SfM](#multi-stage_SfM)
+- [SfM](#SfM)
+    - [incremental SfM](#incremental_SfM)
+    - [global SfM](#global_SfM)
+    - [hierarchica SfM](#hierarchical_SfM)
+    - [multi-stage SfM](#multi-stage_SfM)
 - [graph-based](#graph-based)
 - [factor graph](#factor-graph)
 - [depth](#depth)
@@ -30,22 +30,15 @@
 - [SLAM](#SLAM)
 - [robot grasp](#robot_grasp)
 
-
-
-# keywords
-
-> **SfM** | **三维重建** | **graph-based** | **factor-graph** | **深度估计** | **feature keypoint** | **feature dectect** | **feature description** | **AR** | **feature descriptor** | **feature tracking** | **feature matching** | **outlier** | **bundle adjustment** | **localization** | **motion** | **non-rigid** | **distortion** | **parallel** | **camera model** | **fisheye** | **segmentation** | **fundamental matrix** | **factorization** | **optimization** | **mesh** | **stereo** | **RGB-D** | **dehazing** | **Multi-View Stereo** | **point cloud** | **surface** | **单目** | **多目** | **TSDF** | **dense map** | **semi-dense map** | **增大视野** | **visual odometry** | **visual-inertial odometry** | **LiDAR** | **3D结构光** | **直接法** | **特征点法** | **半直接法** | **DNN** | **uncertainty estimation** | **pose** | **GAN** |
-
-
-
-# papers
+<a name="SfM"></a>
+# SfM
 
 <a name="incremental_SfM"></a>
 ## incremental SfM
 
-["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf), Johannes L.Schonberger, Jan-Michael Frahm, 2016 CVPR
-
 ["Towards Linear-time Incremental Structure from Motion"](http://ccwu.me/vsfm/vsfm.pdf), 2013 3DV
+
+["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf), Johannes L.Schonberger, Jan-Michael Frahm, 2016 CVPR
 
 <a name="global_SfM"></a>
 ## global SfM

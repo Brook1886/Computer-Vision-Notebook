@@ -43,6 +43,10 @@
 <a name="incremental_SfM"></a>
 ## incremental SfM
 
+["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf), Johannes L.Schonberger, Jan-Michael Frahm, 2016 CVPR
+
+
+
 ["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
 
 > 增量式SfM用于三维重建

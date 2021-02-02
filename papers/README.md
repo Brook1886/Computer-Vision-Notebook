@@ -45,85 +45,15 @@
 
 ["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf), Johannes L.Schonberger, Jan-Michael Frahm, 2016 CVPR
 
-
-
-["Structure-from-Motion Revisited"](https://demuc.de/papers/schoenberger2016sfm.pdf) 2016 CVPR
-
 > 增量式SfM用于三维重建
 >
 > **SfM** | **三维重建** |
-
-+ scene graph augmentation
-    + 估计基本矩阵F，当$inliers >= N_F$, image pair 几何匹配
-    + 根据决定H的inliers数目NH划分H
-        
-        GRIC法
-        
-        如果 $N_H / N_F < \epsilon_{HF}$, camera 在同一个场景移动
-        
-    + 对于标定好的相机
-    
-        E 本质矩阵，$N_E / N_F > \epsilon_{EF}$, 说明标定正确
-        
-        分解E、三角测量、median triangulation angle $\alpha_m$, 可区分pure rotation、planar scenes
-        
-    + 辨别 WTF（watermarks、timestamps frames）不加入 scene graph
-    + valid pairs
-    
-+ nest best view selection
-    
-    目标：minimize reconstruction error
-    
-    使用 uncertainty-driven 方法
-    
-    PnP 相机姿态估计的精度，取决于观察点的数量、及其在images上的分布；
-    
-    没有（有误）相机标定下，估计内参
-    
-    充分地评估会比较耗时、所以近似评估
-    
-    数目越多、分布越均匀 -> score 越高
-    
-    按固定大小网格离散化图片，统计score
-    
-+ robust and efficient triangulation
-    
-    cheriality constraint
-    
-+ BA
-
-    global BA
-    
-    柯西方程 -> loss function
-    
-    solver 分为 sparse direct solver 和 PCG ceres solver
-    
-    radial 畸变参数 -> pure self-calibration
-    
-+ Re-trangulation
-
-    pre-BA RT，post-BA RT
-    
-    不增加三角 threshold，而是 track （error 低于 filter阈值）
-    
-+ Redundant View Mining
-
-    problem -> submaps
-    
-    camera grouping
-    
-    images 和 points 分为 2 个 set：affected 和 unaffected
     
 ["Towards Linear-time Incremental Structure from Motion"](http://ccwu.me/vsfm/vsfm.pdf) 2013 3DV
 
 > 增量式
 >
 > **SfM** | **三维重建** |
-
-+ preemptive feature matching
-+ preconditioned conjugate gradient
-+ reduce scene graph
-
 
 <a name="global_SfM"></a>
 ## global SfM

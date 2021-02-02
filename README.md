@@ -1,6 +1,6 @@
-# Notebook
+# Computer-Vision-Notebook
 
-三维视觉相关笔记
+计算机视觉相关笔记
 
 - [papers](./papers)
 - notes

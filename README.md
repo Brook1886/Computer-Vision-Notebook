@@ -1,6 +1,6 @@
 # Notebook
 
-关于SLAM、SfM、MVS...的学习记录
+三维视觉相关笔记
 
 - [papers](./papers)
 - notes

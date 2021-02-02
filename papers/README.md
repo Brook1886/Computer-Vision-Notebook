@@ -43,9 +43,8 @@
 <a name="incremental_SfM"></a>
 ## incremental SfM
 
-## "Structure-from-Motion Revisited", Johannes L.Schonberger, Jan-Michael Frahm, 2016 CVPR, [pdf](https://demuc.de/papers/schoenberger2016sfm.pdf)    
-
-**Towards Linear-time Incremental Structure from Motion**, 2013 3DV, [pdf](http://ccwu.me/vsfm/vsfm.pdf)
+[Structure-from-Motion Revisited](https://demuc.de/papers/schoenberger2016sfm.pdf), Johannes L.Schonberger, Jan-Michael Frahm, 2016 CVPR    
+[Towards Linear-time Incremental Structure from Motion](http://ccwu.me/vsfm/vsfm.pdf), 2013 3DV
 
 <a name="global_SfM"></a>
 ## global SfM
